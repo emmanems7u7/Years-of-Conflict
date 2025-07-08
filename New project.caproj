@@ -3891,6 +3891,7 @@
     <layout-folder>
         <layout>Layout 1.xml</layout>
         <layout>lvl1.xml</layout>
+        <layout>Layout 2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="lvl1">

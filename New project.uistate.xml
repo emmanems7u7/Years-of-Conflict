@@ -12,8 +12,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Layout 1</layout>
         <layout order="3">lvl1</layout>
+        <layout active="1" order="9">Layout 2</layout>
         <event-sheet order="1">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="2">lvl1</event-sheet>
+        <event-sheet order="2">lvl1</event-sheet>
         <event-sheet order="4">handy</event-sheet>
         <event-sheet order="5">movimientoPuertas</event-sheet>
         <event-sheet order="6">NPCPersona</event-sheet>
