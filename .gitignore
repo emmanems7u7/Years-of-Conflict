@@ -1,8 +1,9 @@
 # Archivos temporales de Construct 2
-*.autosave.caproj
-*.capx
-*.bak
+*.autosave*
 *.tmp
+*.bak
+*.capx.autosave
+*.caproj.autosave
 
 # Miniaturas generadas automáticamente
 Thumbnails/
