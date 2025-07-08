@@ -3,6 +3,694 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>lvl1</name>
     <events>
+        <variable constant="0" name="personaje" sid="391051168095730" static="0" type="number">0</variable>
+        <variable constant="0" name="nivel" sid="223834047116544" static="0" type="number">0</variable>
         <variable constant="0" name="OBJETIVOEXISTE" sid="440290318107876" static="0" type="number">0</variable>
+        <include>handy</include>
+        <include>NPCPersona</include>
+        <variable constant="0" name="camblvl1" sid="804523691602670" static="0" type="number">0</variable>
+        <include>tv</include>
+        <include>movimientoPuertas</include>
+        <event-block sid="134319445552477">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="886113339337595" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="691147492803922" type="solPared2">
+                    <param id="0" name="Object">paredE</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="854693664824940" type="solPared">
+                    <param id="0" name="Object">paredE</param>
+                    <param id="1" name="Image point (optional)">&quot;punto1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="931089014368186" type="System">
+                    <param id="0" name="Variable">nivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="160012921624549" type="System">
+                    <param id="0" name="Variable">personaje</param>
+                    <param id="1" name="Value">&quot;policia&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="458811228668197" type="funcion">
+                    <param id="0" name="Name">&quot;iniciaVariables&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="987444146680059">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="578826974352772" type="solParedIZQ">
+                            <param id="0" name="Instance variable">pos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="298227335250881" type="solParedIZQ">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">&quot;pared1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335749917757446">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="289406098431766" type="solParedDER">
+                            <param id="0" name="Instance variable">pos</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="955948102541957" type="solParedDER">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">&quot;pared2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="532550222072037">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="131221247505890" type="edificio2">
+                            <param id="0" name="Unique ID">656</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="234295829111112">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="491428422798185" type="objEn">
+                                    <param id="0" name="Unique ID">758</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="866589881099701" type="objEn">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;sillon&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="390970430222046">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="440147155545899" type="objatras">
+                                    <param id="0" name="Unique ID">790</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="147131641292287" type="objatras">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;tv&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="185282558331556">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="576581786890906" type="casafuera">
+                    <param id="0" name="Unique ID">551</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="645129061992012">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="881213974115043" type="OBJPOSICION">
+                            <param id="0" name="Unique ID">531</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="487906961119693" type="OBJPOSICION">
+                            <param id="0" name="Object">casafuera</param>
+                            <param id="1" name="Image point (optional)">&quot;puerta&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="905841329440819">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="887262144299837" type="edificio2">
+                    <param id="0" name="Unique ID">408</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="205106601123510">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="205366483643786" type="casafuera">
+                            <param id="0" name="Unique ID">551</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="329896504952876" type="casafuera">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596517138308079">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="598798070396089" type="paredE">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="122490257565526" type="paredE">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="217555815616892">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="942674146333467" type="paredE">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="965650188631149" type="paredE">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="920625479699715">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="232726263341470" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="394605610464315" type="paredE">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+                <action id="-29" name="Move to object" sid="604268493093500" type="paredE">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">casafuera</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="844602915304118" type="ACERA">
+                    <param id="0" name="Layer">&quot;suelo&quot;</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="903616679594591" type="solPared">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="906002880563001" type="puerta">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+                <action id="-29" name="Move to object" sid="746065592765735" type="puerta">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">casafuera</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="535764295067776" type="objEn">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+                <action id="-29" name="Move to object" sid="201111288480551" type="objEn">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">casafuera</param>
+                </action>
+                <action id="-10" name="Set value" sid="667410956302950" type="puerta">
+                    <param id="0" name="Instance variable">dato</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="631464201129894">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="241733326806423" type="casafuera">
+                            <param id="0" name="Unique ID">551</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="220837856146505" type="casafuera">
+                            <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="685078448393369">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="893152939086168" type="casafuera">
+                            <param id="0" name="Unique ID">445</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="329976564969545" type="casafuera">
+                            <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="487083390729697">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="996273257148290" type="suelocasas">
+                            <param id="0" name="Unique ID">806</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="603166288806300" type="suelocasas">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="228658693173089">
+            <conditions>
+                <condition id="-22" name="Else" sid="539901359604174" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="466672196008306">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="172562621076308" type="suelocasas">
+                            <param id="0" name="Unique ID">806</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="852684924121441" type="suelocasas">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="499671407142677">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="616279042659529" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="890232843330453" type="paredE">
+                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="334777618881057" type="ACERA">
+                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="138711555411988">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="673648854442818" type="casafuera">
+                            <param id="0" name="Unique ID">551</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="907148274428589" type="casafuera">
+                            <param id="0" name="Opacity">lerp(self.Opacity,0,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="616846501157601">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="890758675285816" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="739148081111105" type="objEn">
+                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="744317282277033" type="ACERA">
+                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="213168246293618">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="297471550230498" type="casafuera">
+                            <param id="0" name="Unique ID">445</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="835055718365447" type="casafuera">
+                            <param id="0" name="Opacity">lerp(self.Opacity,0,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="930528787684701">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="617103079436347" type="edificio2">
+                    <param id="0" name="Unique ID">408</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="969167808023496">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="385338890147386" type="puerta">
+                            <param id="0" name="Unique ID">454</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="660812722464096" type="puerta">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">&quot;puerta2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="553882715151738">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="209261638748543" type="puerta">
+                            <param id="0" name="Unique ID">453</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="836473861479895" type="puerta">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">&quot;puerta1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="860708133971213">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="569116520599105" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="291039281942617">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="843874730778157" type="cuerpoP">
+                            <param id="0" name="Object">paredE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="165289030947575">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="571842703461193" type="paredE">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">cuerpoP.X</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="101488288496128">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="292134153243154" type="paredE">
+                                            <param id="0" name="Object">puerta</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="120745306177173" type="puerta">
+                                            <param id="0" name="Instance variable">dato</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="593236808593383">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="893337716052844" type="cuerpoP">
+                            <param id="0" name="Object">puerta</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="297198197315920">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="429077023643046" type="puerta">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">cuerpoP.X</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="747849497609786">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="199766258565409" type="paredE">
+                                            <param id="0" name="Object">puerta</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="173533469724439" type="puerta">
+                                            <param id="0" name="Instance variable">dato</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="157898375278002">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="578397774255174" type="paredE">
+                    <param id="0" name="Object">puerta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="386774545450328" type="paredE">
+                    <param id="0" name="Layer">puerta.LayerName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587837209198822">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="616140533714777" type="puerta">
+                    <param id="0" name="Instance variable">dato</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="938000432522011" type="puerta">
+                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="357095576034490">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="414892261152340" type="puerta">
+                            <param id="0" name="Instance variable">abierto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="190217002425681" type="solPared2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="759718510463397" type="solPared">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="186663706285751">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="808129421008093" type="puerta">
+                    <param id="0" name="Instance variable">dato</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="232384275802007" type="puerta">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="530092323800821">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="950964494436084" type="puerta">
+                            <param id="0" name="Instance variable">abierto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="789321050545067" type="solPared">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="982999458562122" type="solPared2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="597424025465909">
+            <conditions>
+                <condition id="3" name="On touched object" sid="548856877830798" type="Touch">
+                    <param id="0" name="Object">btn_mano</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="316623520702632" type="cuerpoP">
+                    <param id="0" name="Object">puerta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="675577980008392" type="puerta">
+                    <param id="0" name="Instance variable">abierto</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702421574212328">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="586240565641390" type="puerta">
+                    <param id="0" name="Instance variable">abierto</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="221476908974092" type="puerta">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="580363305481861" type="puerta">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="296002021103034">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="129615853000812" type="puerta">
+                    <param id="0" name="Instance variable">abierto</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="946913773917290" type="puerta">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="874326565278539">
+            <conditions>
+                <condition id="3" name="On touched object" sid="774303435398431" type="Touch">
+                    <param id="0" name="Object">btn_mano</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="424042686179840" type="puerta" />
+                <condition id="1" name="Is overlapping another object" sid="377657028327643" type="cuerpoP">
+                    <param id="0" name="Object">puerta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="255888459648254" type="puerta">
+                    <param id="0" name="Instance variable">abierto</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="701274156334054">
+            <conditions>
+                <condition id="7" name="Is mirrored" sid="515435189481068" type="puerta" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="811946881287027">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="331953918103665" type="puerta">
+                            <param id="0" name="Instance variable">abierto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="135310836630553" type="solPared">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="723171569468787" type="solPared2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="813304137244895">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="359396966482382" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="188390977426384" type="solParedIZQ">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="818401230890806" type="solParedDER">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="644064818964088">
+            <conditions>
+                <condition id="-22" name="Else" sid="962647159531799" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="172920535647198" type="solParedIZQ">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="240273999446589" type="solParedDER">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="616460465484559" type="solPared">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="303278133618080" type="solPared2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="127846999958999">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="441406045579894" type="casafuera">
+                    <param id="0" name="Unique ID">445</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="723960575188881">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="218299126308151" type="edificio2">
+                            <param id="0" name="Unique ID">656</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="839959570729073" type="casafuera">
+                            <param id="0" name="Object">edificio2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <variable constant="0" name="dato" sid="420931369864630" static="0" type="number">0</variable>
+        <event-block disabled="1" sid="552553867509950">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="975095536777022" type="casafuera" />
+                <condition id="-14" name="Pick by unique ID" sid="191897087272595" type="casafuera">
+                    <param id="0" name="Unique ID">551</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="949606731967614" type="puerta">
+                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                </action>
+                <action id="-29" name="Move to object" sid="749766979730453" type="puerta">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">casafuera</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
