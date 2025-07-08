@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tv</name>
+    <events>
+        <variable constant="0" name="botones" sid="171663513329462" static="0" type="number">0</variable>
+        <event-block sid="364704272558464">
+            <conditions>
+                <condition id="3" name="On touched object" sid="886389301212947" type="Touch">
+                    <param id="0" name="Object">btntv</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="522040198932538" type="btntv">
+                    <param id="0" name="Opacity">60</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="472915490365715">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="933596068599675" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="504023655574880" type="voltv">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="112353982208187" type="vAU">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="165339178243246" type="voltv">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="538894066129658">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="835418116877444" type="vAU">
+                                    <param id="0" name="Instance variable">C</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="215691536174210" type="System">
+                                    <param id="0" name="Object to create">vAU</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="X">voltv.X+21</param>
+                                    <param id="3" name="Y">voltv.Y</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="412214582725161" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="138231055001956" type="voltv">
+                                    <param id="0" name="Instance variable">d</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318528844496143">
+                            <conditions>
+                                <condition id="-20" name="Pick highest/lowest" sid="882446463595095" type="vAU">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Instance variable">U</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="132760204015508">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="712383490876830" type="voltv">
+                                            <param id="0" name="Instance variable">volI</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">14</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="910179230289401" type="System">
+                                            <param id="0" name="Object to create">vAU</param>
+                                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                                            <param id="2" name="X">vAU.ImagePointX(&quot;au&quot;)</param>
+                                            <param id="3" name="Y">vAU.ImagePointY(&quot;au&quot;)</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="529261890945760" type="voltv">
+                                            <param id="0" name="Instance variable">vol</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="430687189420907" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="461335031788161" type="voltv">
+                                            <param id="0" name="Instance variable">d</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="701866354645487">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="224605754655196" type="voltv">
+                                            <param id="0" name="Instance variable">volI</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">14</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="419293073108807" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="345950540181173" type="voltv">
+                                            <param id="0" name="Instance variable">d</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="546657191702010">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="854394340135902" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="782520792287809" type="voltv">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="966671269492789" type="vAU">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="928334589420211" type="voltv">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="103722925162336">
+                            <conditions>
+                                <condition id="-20" name="Pick highest/lowest" sid="464919812665302" type="vAU">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Instance variable">U</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="213084737556213">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="127519084363976" type="voltv">
+                                            <param id="0" name="Instance variable">volI</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="878256058201319" type="vAU" />
+                                        <action id="-12" name="Subtract from" sid="864064054908353" type="voltv">
+                                            <param id="0" name="Instance variable">vol</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="529486050290879" type="voltv">
+                                            <param id="0" name="Instance variable">volI</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="582160337820320" type="vAU">
+                                            <param id="0" name="Instance variable">U</param>
+                                            <param id="1" name="Value">voltv.volI</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="535287689385641" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="106242901627085" type="voltv">
+                                            <param id="0" name="Instance variable">d</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="247084128302013">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="479984859766949" type="Touch">
+                    <param id="0" name="Object">btntv</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="145717196796988" type="btntv">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="241801487959095">
+            <conditions>
+                <condition id="-18" name="On created" sid="481620932231098" type="vAU" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="340582662190489" type="vAU">
+                    <param id="0" name="Instance variable">C</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="304587082213503" type="voltv">
+                    <param id="0" name="Instance variable">volI</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="699025337333330" type="vAU">
+                    <param id="0" name="Instance variable">U</param>
+                    <param id="1" name="Value">voltv.volI</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432193310183955">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="276032359058731" type="voltv" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="309321556148089">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="568626095370020" type="voltv">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="380728513057043" type="voltv">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="796240780640686" type="vAU">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="542520089768096">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="187835665740405" type="cuerpoP">
+                    <param id="0" name="Object">objatras</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="587967949973738" type="direccion">
+                    <param id="0" name="Instance variable">para</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="323586282313558">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="681893238810144" type="objatras">
+                            <param id="0" name="Unique ID">790</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="119893660521586" type="direccion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="814249298037453">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="445944296102480" type="cuerpoP">
+                    <param id="0" name="Object">objatras</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="616025363664362">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="678578758682561" type="objatras">
+                            <param id="0" name="Unique ID">790</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="830348618993296" type="objatras">
+                            <param id="0" name="Unique ID">828</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="465071462409056" type="System">
+                            <param id="0" name="Object to create">direccion</param>
+                            <param id="1" name="Layer">&quot;pared&quot;</param>
+                            <param id="2" name="X">objatras.X</param>
+                            <param id="3" name="Y">objatras.Y-17</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="240922712618800" type="direccion">
+                            <param id="0" name="Instance variable">para</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="975335698640853">
+            <conditions>
+                <condition id="4" name="On finished" sid="816582876876446" type="CONVERSACION">
+                    <param id="0" name="Animation">&quot;noescucha&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="803901066846171" type="CONVERSACION">
+                    <param id="0" name="Animation">&quot;cierranoescucha&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="574886822288009">
+            <conditions>
+                <condition id="4" name="On finished" sid="531752456983845" type="CONVERSACION">
+                    <param id="0" name="Animation">&quot;cierranoescucha&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="472662029531373" type="CONVERSACION" />
+            </actions>
+        </event-block>
+        <event-block sid="421031595303276">
+            <conditions>
+                <condition id="3" name="On touched object" sid="680468082660011" type="Touch">
+                    <param id="0" name="Object">btn_mano</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="710510249893982" type="cuerpoP">
+                    <param id="0" name="Object">objatras</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="477573451415264" type="objatras">
+                    <param id="0" name="Unique ID">790</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="944843905628518" type="tvpared">
+                    <param id="0" name="X">188</param>
+                    <param id="1" name="Y">77</param>
+                </action>
+                <action id="-3" name="Set position" sid="209548830724314" type="vAU">
+                    <param id="0" name="X">178</param>
+                    <param id="1" name="Y">116</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="118027911085864">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="994748520291153" type="objatras">
+                            <param id="0" name="Unique ID">790</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="856992144001221">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="442197226490627" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="158889131411900" type="System">
+                                    <param id="0" name="Variable">botones</param>
+                                    <param id="1" name="Value">&quot;no&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="349979025586507" type="btntv">
+                                    <param id="0" name="Instance variable">apagado</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="757328857982413" type="Audio">
+                                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="187100910251159" type="Audio">
+                                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz+1</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="158663782081258" type="Audio">
+                                    <param id="0" name="Tag">&quot;noticias&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="734610607090874" type="Audio">
+                                    <param id="0" name="Tag">&quot;noticia2&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="373410792981618" type="Audio">
+                                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="878231005843765">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="327090694248271" type="tv">
+                                    <param id="0" name="Instance variable">noticia</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="787828206515239">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="584130401317470" type="voltv">
+                                            <param id="0" name="Instance variable">voz</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="461706559075314" type="btntv">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="362977130738787" type="btntv">
+                                            <param id="0" name="Instance variable">pulsado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="28" name="Play at object (by name)" sid="223295847878837" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;noticieroFondo&quot;</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="4" name="Object">objatras</param>
+                                            <param id="5" name="Inner angle">360</param>
+                                            <param id="6" name="Outer angle">360</param>
+                                            <param id="7" name="Outer gain">0</param>
+                                            <param id="8" name="Tag (optional)">&quot;fondon&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="767311482215629" type="CONVERSACION">
+                                            <param id="0" name="Animation">&quot;noescucha&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="475330707303277" type="System">
+                                            <param id="0" name="Seconds">1.5</param>
+                                        </action>
+                                        <action id="28" name="Play at object (by name)" sid="644094725038260" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;noticiainicio&quot;</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="4" name="Object">objatras</param>
+                                            <param id="5" name="Inner angle">360</param>
+                                            <param id="6" name="Outer angle">360</param>
+                                            <param id="7" name="Outer gain">0</param>
+                                            <param id="8" name="Tag (optional)">&quot;noticias&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="192927874461334">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="925117751812766" type="objatras">
+                            <param id="0" name="Unique ID">828</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>publicidad</comment>
+                <event-block sid="708933136178787">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="361325188407647" type="tv">
+                            <param id="0" name="Instance variable">noticia</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="406532914412332">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="402408248150253" type="btntv">
+                    <param id="0" name="Instance variable">apagado</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set muted" sid="982298026212461" type="Audio">
+                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="2" name="Set muted" sid="765034366822515" type="Audio">
+                    <param id="0" name="Tag">&quot;noticias&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="2" name="Set muted" sid="689002539808564" type="Audio">
+                    <param id="0" name="Tag">&quot;noticia2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="2" name="Set muted" sid="155120424815078" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="216579407238842">
+            <conditions>
+                <condition id="3" name="On touched object" sid="510131207816468" type="Touch">
+                    <param id="0" name="Object">btntv</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="305276611093079" type="btntv">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="749838118766365" type="tvpared">
+                    <param id="0" name="X">106</param>
+                    <param id="1" name="Y">-53</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="564094472168051" type="btntv">
+                    <param id="0" name="Instance variable">pulsado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="341776483650383" type="btntv">
+                    <param id="0" name="Instance variable">apagado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="321751965367466">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="500571530005640" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="437667275030924" type="System">
+                            <param id="0" name="Variable">botones</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167147115225632">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="187764057359134" type="objatras">
+                            <param id="0" name="Unique ID">790</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="711555287818778" type="objatras">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="807935431365368">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="780026184853764" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="584209592217389" type="cabezaGoni">
+                    <param id="0" name="Object">tvcont</param>
+                    <param id="1" name="Image point (optional)">&quot;goni&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="334549650888529" type="cabezarep">
+                    <param id="0" name="Object">tvcont</param>
+                    <param id="1" name="Image point (optional)">&quot;rep&quot;&amp;cabezarep.rep</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="604308608913037" type="cabezamil">
+                    <param id="0" name="Object">tvcont</param>
+                    <param id="1" name="Image point (optional)">&quot;sol&quot;&amp;cabezamil.c</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="831922108256049" type="tvcont">
+                    <param id="0" name="Object">tvpared</param>
+                    <param id="1" name="Image point (optional)">&quot;sold&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="462420662351533" type="tv">
+                    <param id="0" name="Object">tvpared</param>
+                    <param id="1" name="Image point (optional)">&quot;sold&quot;</param>
+                </action>
+                <action id="3" name="Set volume" sid="638964597700901" type="Audio">
+                    <param id="0" name="Tag">&quot;noticias&quot;</param>
+                    <param id="1" name="dB">voltv.vol</param>
+                </action>
+                <action id="3" name="Set volume" sid="877742841302782" type="Audio">
+                    <param id="0" name="Tag">&quot;noticia2&quot;</param>
+                    <param id="1" name="dB">voltv.vol</param>
+                </action>
+                <action id="3" name="Set volume" sid="997453506348294" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                    <param id="1" name="dB">voltv.vol</param>
+                </action>
+                <action id="3" name="Set volume" sid="846725092995016" type="Audio">
+                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz</param>
+                    <param id="1" name="dB">voltv.vol</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="402434110719961" type="CONVERSACION">
+                    <param id="0" name="Object">tv</param>
+                    <param id="1" name="Image point (optional)">&quot;textoEs&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="252138287843164">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="128283540365004" type="logoTV">
+                            <param id="0" name="Animation">&quot;LOGO&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="124120730721544" type="logoTV">
+                            <param id="0" name="Object">tvpared</param>
+                            <param id="1" name="Image point (optional)">&quot;m&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247554743902741">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="798640991785531" type="logoTV">
+                            <param id="0" name="Animation">&quot;panelP&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="868374170729265" type="logoTV">
+                            <param id="0" name="Object">tvpared</param>
+                            <param id="1" name="Image point (optional)">&quot;l&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234138820816339">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="221844768403942" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="443225562168083" type="btntv">
+                            <param id="0" name="Object">tv</param>
+                            <param id="1" name="Image point (optional)">&quot;apagar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="341716151695998">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="438260078143389" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="715421478665383" type="btntv">
+                            <param id="0" name="Object">tv</param>
+                            <param id="1" name="Image point (optional)">&quot;+&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="778179874457466">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="151098524374831" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="686964333390194" type="btntv">
+                            <param id="0" name="Object">tv</param>
+                            <param id="1" name="Image point (optional)">&quot;-&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="786759015281890">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="425709166745022" type="btntv">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="106781135085612" type="btntv">
+                            <param id="0" name="Object">tv</param>
+                            <param id="1" name="Image point (optional)">&quot;av&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="235261333529856">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="401023792303918" type="logoTV">
+                            <param id="0" name="Unique ID">761</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="289559291103116" type="voltv">
+                            <param id="0" name="Object">logoTV</param>
+                            <param id="1" name="Image point (optional)">&quot;v&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="750127428098620">
+            <conditions>
+                <condition id="0" name="On ended" sid="149277181706367" type="Audio">
+                    <param id="0" name="Tag">&quot;noticias&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="28" name="Play at object (by name)" sid="828733709531119" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;g1&quot;</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="4" name="Object">objatras</param>
+                    <param id="5" name="Inner angle">360</param>
+                    <param id="6" name="Outer angle">360</param>
+                    <param id="7" name="Outer gain">0</param>
+                    <param id="8" name="Tag (optional)">&quot;g1&quot;</param>
+                </action>
+                <action id="-11" name="Add to" sid="955118261257939" type="voltv">
+                    <param id="0" name="Instance variable">voz</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="3" name="Set volume" sid="832749784314295" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                    <param id="1" name="dB">voltv.vol-30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="710629731712833">
+            <conditions>
+                <condition id="0" name="On ended" sid="817127692096540" type="Audio">
+                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="131439101440755" type="cabezaGoni">
+                    <param id="0" name="Animation">&quot;nohabla&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="835710925437976" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="28" name="Play at object (by name)" sid="698827989226770" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;g&quot;&amp;voltv.voz+1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="4" name="Object">objatras</param>
+                    <param id="5" name="Inner angle">360</param>
+                    <param id="6" name="Outer angle">360</param>
+                    <param id="7" name="Outer gain">0</param>
+                    <param id="8" name="Tag (optional)">&quot;g&quot;&amp;voltv.voz+1</param>
+                </action>
+                <action id="3" name="Set volume" sid="562823305768402" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                    <param id="1" name="dB">voltv.vol-30</param>
+                </action>
+                <action id="-11" name="Add to" sid="345890792644222" type="voltv">
+                    <param id="0" name="Instance variable">voz</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262986269303176">
+            <conditions>
+                <condition id="0" name="On ended" sid="500889114880320" type="Audio">
+                    <param id="0" name="Tag">&quot;g13&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="28" name="Play at object (by name)" sid="604620472438109" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;noticia2&quot;</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="4" name="Object">objatras</param>
+                    <param id="5" name="Inner angle">360</param>
+                    <param id="6" name="Outer angle">360</param>
+                    <param id="7" name="Outer gain">0</param>
+                    <param id="8" name="Tag (optional)">&quot;noticia2&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="143067084805828" type="cabezaGoni">
+                    <param id="0" name="Animation">&quot;nohabla&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Set volume" sid="585118030972255" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                    <param id="1" name="dB">voltv.vol</param>
+                </action>
+                <action id="-10" name="Set value" sid="474874382749394" type="voltv">
+                    <param id="0" name="Instance variable">voz</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="831036775911354">
+            <conditions>
+                <condition id="0" name="On ended" sid="583249866299788" type="Audio">
+                    <param id="0" name="Tag">&quot;noticia2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="191998601716876" type="Audio">
+                    <param id="0" name="Tag">&quot;fondon&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="374959052615530" type="cabezaGoni">
+                    <param id="0" name="Animation">&quot;nohabla&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="419539648993731" type="tv">
+                    <param id="0" name="Instance variable">noticia</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="618637629479543">
+            <conditions>
+                <condition id="5" name="Is tag playing" sid="282098132148381" type="Audio">
+                    <param id="0" name="Tag">&quot;g&quot;&amp;voltv.voz</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="770350739505888" type="cabezaGoni">
+                    <param id="0" name="Animation">&quot;habla&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962842277160975">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="976536625885239" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="392439784200938" type="voltv">
+                    <param id="0" name="Instance variable">voz</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>handy</name>
+    <events>
+        <event-block sid="126535849167070">
+            <conditions>
+                <condition id="3" name="On touched object" sid="736517627408532" type="Touch">
+                    <param id="0" name="Object">btn_mano</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="326988551214779" type="cuerpoP">
+                    <param id="0" name="Object">objatras</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="883586706905928" type="objatras">
+                    <param id="0" name="Unique ID">828</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="242284943039412" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivoP&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="289492077459984" type="System">
+                    <param id="0" name="Variable">OBJETIVOEXISTE</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="611289301179008" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivoS&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+                <action id="0" name="Call function" sid="986891359787734" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivosSArray&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="237002025267503" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="468465779358200" type="mision_principal1">
+                    <param id="0" name="Instance variable">ver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

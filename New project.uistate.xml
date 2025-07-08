@@ -11,8 +11,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
+        <layout order="3">lvl1</layout>
         <event-sheet order="1">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="2">even 2</event-sheet>
+        <event-sheet order="2">lvl1</event-sheet>
+        <event-sheet order="4">handy</event-sheet>
+        <event-sheet order="5">movimientoPuertas</event-sheet>
+        <event-sheet order="6">NPCPersona</event-sheet>
+        <event-sheet active="1" order="7">tv</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,10 +30,76 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/lvl1/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/autoCopia/" />
+        <folder expanded="1" path="animation-folder/edificio2/" />
+        <folder expanded="1" path="animation-folder/casafuera/" />
+        <folder expanded="1" path="animation-folder/A1/" />
+        <folder expanded="1" path="animation-folder/camara/" />
+        <folder expanded="1" path="animation-folder/boton/" />
+        <folder expanded="1" path="animation-folder/saltar/" />
+        <folder expanded="1" path="animation-folder/b_continuar/" />
+        <folder expanded="1" path="animation-folder/b_salir/" />
+        <folder expanded="1" path="animation-folder/b_reiniciar/" />
+        <folder expanded="1" path="animation-folder/disparar/" />
+        <folder expanded="1" path="animation-folder/b_pause/" />
+        <folder expanded="1" path="animation-folder/mochila/" />
+        <folder expanded="1" path="animation-folder/btn_mano/" />
+        <folder expanded="1" path="animation-folder/cuerpoP/" />
+        <folder expanded="1" path="animation-folder/cuerpoP/policia/" />
+        <folder expanded="1" path="animation-folder/cuerpoP/ayacucho/" />
+        <folder expanded="1" path="animation-folder/cabeza/" />
+        <folder expanded="1" path="animation-folder/cabeza/policia/" />
+        <folder expanded="1" path="animation-folder/brazo1/" />
+        <folder expanded="1" path="animation-folder/brazo1/policia/" />
+        <folder expanded="1" path="animation-folder/brazo1/policia/dispara/" />
+        <folder expanded="1" path="animation-folder/brazo1/policia/carga/" />
+        <folder expanded="1" path="animation-folder/brazo2/" />
+        <folder expanded="1" path="animation-folder/brazo2/policia/" />
+        <folder expanded="1" path="animation-folder/cabeza_polanim/" />
+        <folder expanded="1" path="animation-folder/btn_bomba/" />
+        <folder expanded="1" path="animation-folder/autosrec/" />
+        <folder expanded="1" path="animation-folder/Sprite71/" />
+        <folder expanded="1" path="animation-folder/textoT/" />
+        <folder expanded="1" path="animation-folder/gamepad/" />
+        <folder expanded="1" path="animation-folder/mision_principal1/" />
+        <folder expanded="1" path="animation-folder/joystick3/" />
+        <folder expanded="1" path="animation-folder/reiniciarB/" />
+        <folder expanded="1" path="animation-folder/misionPrinAviso/" />
+        <folder expanded="1" path="animation-folder/joystick2/" />
+        <folder expanded="1" path="animation-folder/VICTORIA_3/" />
+        <folder expanded="1" path="animation-folder/gamepad_middle/" />
+        <folder expanded="1" path="animation-folder/mision_secundaria1/" />
+        <folder expanded="1" path="animation-folder/cuerpoAnim/" />
+        <folder expanded="1" path="animation-folder/brazoanimacion/" />
+        <folder expanded="1" path="animation-folder/puerta/" />
+        <folder expanded="1" path="animation-folder/logoTV/" />
+        <folder expanded="1" path="animation-folder/misionSecaviso/" />
+        <folder expanded="1" path="animation-folder/solPared2/" />
+        <folder expanded="1" path="animation-folder/solParedDER/" />
+        <folder expanded="1" path="animation-folder/tvcont/" />
+        <folder expanded="1" path="animation-folder/brazonpc/" />
+        <folder expanded="1" path="animation-folder/tv/" />
+        <folder expanded="1" path="animation-folder/cabezamil/" />
+        <folder expanded="1" path="animation-folder/objatras/" />
+        <folder expanded="1" path="animation-folder/solPared/" />
+        <folder expanded="1" path="animation-folder/CONVERSACION/" />
+        <folder expanded="1" path="animation-folder/OBJPOSICION/" />
+        <folder expanded="1" path="animation-folder/voltv/" />
+        <folder expanded="1" path="animation-folder/cabezarep/" />
+        <folder expanded="1" path="animation-folder/vAU/" />
+        <folder expanded="1" path="animation-folder/direccion/" />
+        <folder expanded="1" path="animation-folder/cabezaGoni/" />
+        <folder expanded="1" path="animation-folder/npcPersona/" />
+        <folder expanded="1" path="animation-folder/paredE/" />
+        <folder expanded="1" path="animation-folder/cabezaNPC/" />
+        <folder expanded="1" path="animation-folder/tvpared/" />
+        <folder expanded="1" path="animation-folder/btntv/" />
+        <folder expanded="1" path="animation-folder/objEn/" />
+        <folder expanded="1" path="animation-folder/solParedIZQ/" />
     </folders-expanded>
 </c2uistate>

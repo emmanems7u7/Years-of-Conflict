@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NPCPersona</name>
+    <events>
+        <event-block sid="215513921325324">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="484445239180404" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="487437300299993" type="brazonpc">
+                    <param id="0" name="Object">npcPersona</param>
+                    <param id="1" name="Image point (optional)">&quot;brazo1&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="812417036103096" type="cabezaNPC">
+                    <param id="0" name="Object">npcPersona</param>
+                    <param id="1" name="Image point (optional)">&quot;cabeza&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="287304243358399">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="861783958857475" type="npcPersona">
+                    <param id="0" name="Object">cuerpoP</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="564126520463204">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="302534567084028" type="cabezaNPC">
+                            <param id="0" name="Instance variable">crea</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="301246580168799" type="cabezaNPC">
+                            <param id="0" name="Instance variable">crea</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302713112529225">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="362853922928963" type="Touch">
+                            <param id="0" name="Object">btn_mano</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="198323850434547" type="cabezaNPC">
+                            <param id="0" name="Animation">&quot;habla&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="125592298386005" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(&quot;s1&quot;,&quot;s2&quot;,&quot;s3&quot;,&quot;s4&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;HNPCpersona&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="611282639175780">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="869470832538552" type="direccion">
+                                    <param id="0" name="Instance variable">para</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="369651958926255" type="direccion" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="566313113144554">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="799814703031955" type="cuerpoP">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">npcPersona.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="332037463261992" type="npcPersona">
+                            <param id="0" name="Instance variable">lado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="526985655528071">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="851509667139030" type="cuerpoP">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">npcPersona.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="281568032111718" type="npcPersona">
+                            <param id="0" name="Instance variable">lado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="827815707969965">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="745301014688431" type="npcPersona">
+                    <param id="0" name="Object">cuerpoP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="670953767616642" type="cabezaNPC">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="337176225102116" type="cabezaNPC">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="563753208924516">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="731795145988348" type="npcPersona">
+                    <param id="0" name="Instance variable">lado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="599794182598432" type="npcPersona">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="493708693000809" type="cabezaNPC">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="468258168330472" type="brazonpc">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="127929871469593">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="985903027470377" type="npcPersona">
+                    <param id="0" name="Instance variable">lado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="747965765848591" type="npcPersona">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="961053163333358" type="cabezaNPC">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="817058577232619" type="brazonpc">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280538354788881">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="633067994001935" type="cabezaNPC">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="112452473552070" type="System">
+                    <param id="0" name="Object to create">direccion</param>
+                    <param id="1" name="Layer">&quot;pared&quot;</param>
+                    <param id="2" name="X">cabezaNPC.X</param>
+                    <param id="3" name="Y">cabezaNPC.Y-17</param>
+                </action>
+                <action id="-10" name="Set value" sid="624809815664702" type="direccion">
+                    <param id="0" name="Instance variable">para</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="670065831931679" type="cabezaNPC">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914043335102135">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="651889662382082" type="direccion">
+                    <param id="0" name="Instance variable">para</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="900041827875351" type="direccion">
+                    <param id="0" name="Animation">&quot;habla&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="180293754731777">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="348551162190377" type="cabezaNPC">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="912209058262626">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="774507171108136" type="direccion">
+                            <param id="0" name="Instance variable">para</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="215218302033021" type="direccion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="755279705911473">
+            <conditions>
+                <condition id="0" name="On ended" sid="494022101095353" type="Audio">
+                    <param id="0" name="Tag">&quot;HNPCpersona&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="844706878229980" type="cabezaNPC">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>movimientoPuertas</name>
+    <events>
+        <event-block sid="545427471062169">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="574701929729107" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="803779155952123" type="direccion" />
+            </actions>
+        </event-block>
+        <event-block sid="470526758814804">
+            <conditions>
+                <condition id="0" name="On function" sid="658311254455356" type="funcion">
+                    <param id="0" name="Name">&quot;entrar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="462922256366283">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="937252451079634" type="cuerpoP">
+                            <param id="0" name="Unique ID">funcion.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="132503881000104" type="OBJPOSICION">
+                            <param id="0" name="Unique ID">funcion.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="653851528751421" type="cuerpoP">
+                            <param id="0" name="Object">OBJPOSICION</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="937149179634051" type="direccion">
+                            <param id="0" name="Frame number">funcion.Param(2)</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="466228962542744" type="funcion">
+                            <param id="0" name="Value">OBJPOSICION.cuarto</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="303859695738753">
+            <conditions>
+                <condition id="3" name="On touched object" sid="497353315113280" type="Touch">
+                    <param id="0" name="Object">btn_mano</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="211458338827530" type="cuerpoP">
+                    <param id="0" name="Object">OBJPOSICION</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="520924261699426" type="funcion">
+                    <param id="0" name="Name">&quot;entrar&quot;</param>
+                    <param id="1" name="Parameter {n}">cuerpoP.UID{###}OBJPOSICION.destino{###}OBJPOSICION.d</param>
+                </action>
+                <action id="-10" name="Set value" sid="155405963635533" type="cuerpoP">
+                    <param id="0" name="Instance variable">cuarto</param>
+                    <param id="1" name="Value">funcion.ReturnValue</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="170392591730108">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="366032215928827" type="direccion">
+                            <param id="0" name="Instance variable">para</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="495615889240467" type="direccion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="345502566446579">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="550045214834352" type="cuerpoP">
+                    <param id="0" name="Object">OBJPOSICION</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="341719443160900">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="881030650090071" type="direccion">
+                            <param id="0" name="Instance variable">para</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="324308667731591" type="direccion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="586085842363736">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="805707557164003" type="cuerpoP">
+                    <param id="0" name="Object">OBJPOSICION</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="363635076018127">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="991073741635241" type="cuerpoP">
+                            <param id="0" name="Instance variable">cuarto</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="512315346385631">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="705215313968996" type="OBJPOSICION">
+                                    <param id="0" name="Unique ID">531</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="699882534484392" type="System">
+                                    <param id="0" name="Object to create">direccion</param>
+                                    <param id="1" name="Layer">&quot;pared&quot;</param>
+                                    <param id="2" name="X">OBJPOSICION.ImagePointX(&quot;señal&quot;)</param>
+                                    <param id="3" name="Y">OBJPOSICION.ImagePointY(&quot;señal&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="442303214519736" type="direccion">
+                                    <param id="0" name="Instance variable">para</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="624359515786765">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="474996685746146" type="cuerpoP">
+                            <param id="0" name="Instance variable">cuarto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="871555314352469">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="544547477269369" type="OBJPOSICION">
+                                    <param id="0" name="Unique ID">531</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="254825408929752" type="System">
+                                    <param id="0" name="Object to create">direccion</param>
+                                    <param id="1" name="Layer">&quot;pared&quot;</param>
+                                    <param id="2" name="X">OBJPOSICION.ImagePointX(&quot;señal&quot;)</param>
+                                    <param id="3" name="Y">OBJPOSICION.ImagePointY(&quot;señal&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="107032049456474" type="direccion">
+                                    <param id="0" name="Instance variable">para</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="331465018044690">
+            <conditions>
+                <condition id="-18" name="On created" sid="321273661479137" type="direccion" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="383784035952804" type="direccion">
+                    <param id="0" name="Instance variable">d</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="881578199014223" type="direccion">
+                    <param id="0" name="Instance variable">d1</param>
+                    <param id="1" name="Value">round(direccion.Y-8)</param>
+                </action>
+                <action id="-10" name="Set value" sid="869447356074756" type="direccion">
+                    <param id="0" name="Instance variable">d2</param>
+                    <param id="1" name="Value">round(direccion.Y)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="216515308122239">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="559086444703461" type="direccion">
+                    <param id="0" name="Instance variable">d</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="816721252850088" type="direccion">
+                    <param id="0" name="Y">lerp(self.Y,direccion.d1,0.07)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="775423766807184">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="698268167801094" type="direccion">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">direccion.d1+1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="441630183837041" type="direccion">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="771901056566883">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="588174938407715" type="direccion">
+                    <param id="0" name="Instance variable">d</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="785374779007913" type="direccion">
+                    <param id="0" name="Y">lerp(self.Y,direccion.d2,0.07)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="264599468206063">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="914119546531087" type="direccion">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">direccion.d2-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="340130541704345" type="direccion">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="151307536040459">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="553631289113291" type="cuerpoP">
+                    <param id="0" name="Object">OBJPOSICION</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="841645345060700">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="146886854816279" type="OBJPOSICION">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="675423330694709">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="992443836742511" type="OBJPOSICION">
+                            <param id="0" name="Instance variable">d</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="765030170018447" type="direccion">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
