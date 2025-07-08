@@ -1,0 +1,13 @@
+# Archivos temporales de Construct 2
+*.autosave.caproj
+*.capx
+*.bak
+*.tmp
+
+# Miniaturas generadas automáticamente
+Thumbnails/
+thumbs.db
+
+# Archivos del sistema o de escritorio
+.DS_Store
+desktop.ini
