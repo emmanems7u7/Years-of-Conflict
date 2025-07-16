@@ -277,7 +277,7 @@
                 <event-block any="1" sid="616025363664362">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="678578758682561" type="objatras">
-                            <param id="0" name="Unique ID">790</param>
+                            <param id="0" name="Unique ID">7</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="830348618993296" type="objatras">
                             <param id="0" name="Unique ID">828</param>

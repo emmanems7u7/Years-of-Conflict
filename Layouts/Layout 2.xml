@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 2</name>
     <sid>341749292202986</sid>
-    <event-sheet></event-sheet>
+    <event-sheet>Event sheet 3</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -63,8 +63,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-766</x>
-                        <y>366</y>
+                        <x>-982</x>
+                        <y>122</y>
                         <z>0</z>
                         <width>4014</width>
                         <height>32</height>
@@ -112,8 +112,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>369</x>
-                        <y>323</y>
+                        <x>155</x>
+                        <y>74</y>
                         <z>0</z>
                         <width>30</width>
                         <height>41</height>
@@ -121,6 +121,152 @@
                         <hotspotX>0.533333361</hotspotX>
                         <hotspotY>0.146341458</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="colider_jugador" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>run_0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <salud>0</salud>
+                        <agachado>false</agachado>
+                        <dentro>si</dentro>
+                        <puerta>0</puerta>
+                        <cuarto>-1</cuarto>
+                        <accion>ataque</accion>
+                        <armas>AK47</armas>
+                        <latera1l>0</latera1l>
+                        <cargadores>1</cargadores>
+                        <destino>0</destino>
+                        <alerta>nada</alerta>
+                        <z_order></z_order>
+                        <objeto1></objeto1>
+                        <objeto2></objeto2>
+                        <a>0</a>
+                        <ataque>false</ataque>
+                        <escudo>false</escudo>
+                        <lateral>false</lateral>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>2500</acceleration>
+                                <deceleration>5000</deceleration>
+                                <jump-strength>450</jump-strength>
+                                <gravity>2100</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="PlatformMoveTo">
+                            <properties>
+                                <activated>Yes</activated>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>203</x>
+                        <y>88</y>
+                        <z>0</z>
+                        <width>42</width>
+                        <height>82</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="cabeza_1" uid="115">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Animation9</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ANGULO>0</ANGULO>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>220</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="PinToImagePoint" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>205</x>
+                        <y>80</y>
+                        <z>0</z>
+                        <width>15</width>
+                        <height>17</height>
+                        <depth>0</depth>
+                        <hotspotX>0.600000024</hotspotX>
+                        <hotspotY>0.882352948</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="brazo1_1" uid="116">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Animation19</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <arma>yes</arma>
+                        <ANGULO>0</ANGULO>
+                        <angulo_cuchillo>0</angulo_cuchillo>
+                        <cuchillo_p>0</cuchillo_p>
+                        <balas>10</balas>
+                        <recarga>false</recarga>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="PinToImagePoint" />
+                        <behavior-instance type="RotateTo">
+                            <properties>
+                                <activated>Yes</activated>
+                                <max-speed>500</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>80</y>
+                        <z>0</z>
+                        <width>38</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.105263159</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-0.000111826</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

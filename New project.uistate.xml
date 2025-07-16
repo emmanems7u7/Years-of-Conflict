@@ -10,16 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <layout order="3">lvl1</layout>
-        <layout active="1" order="9">Layout 2</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
-        <event-sheet order="2">lvl1</event-sheet>
-        <event-sheet order="4">handy</event-sheet>
-        <event-sheet order="5">movimientoPuertas</event-sheet>
-        <event-sheet order="6">NPCPersona</event-sheet>
-        <event-sheet order="7">tv</event-sheet>
-        <event-sheet order="8">ev_personaje</event-sheet>
+        <layout order="0">lvl1</layout>
+        <layout order="2">Layout 1</layout>
+        <layout order="3">Layout 2</layout>
+        <event-sheet order="1">lvl1</event-sheet>
+        <event-sheet active="1" order="4">Event sheet 3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -42,7 +37,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/autos/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/lvl1/" />
+        <folder expanded="0" path="event-folder/lvl1/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -113,5 +108,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CONVERSACION/" />
         <folder expanded="1" path="animation-folder/direccion/" />
         <folder expanded="1" path="animation-folder/solParedIZQ/" />
+        <folder expanded="1" path="animation-folder/colider_jugador/" />
+        <folder expanded="1" path="animation-folder/colider_jugador/detenerse/" />
+        <folder expanded="1" path="animation-folder/colider_jugador/detenerse/New folder/" />
+        <folder expanded="1" path="animation-folder/colider_jugador/de_pie/" />
+        <folder expanded="1" path="animation-folder/colider_jugador/agachado/" />
+        <folder expanded="1" path="animation-folder/brazo1_1/" />
+        <folder expanded="1" path="animation-folder/cabeza_1/" />
     </folders-expanded>
 </c2uistate>

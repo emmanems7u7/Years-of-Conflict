@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block sid="668749354710269">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="107033754522688" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="PinToImagePoint" id="1" name="Pin to image point" sid="826482543100745" type="brazo1_1">
+                    <param id="0" name="Pin to">colider_jugador</param>
+                    <param id="1" name="ImagePoint">&quot;brazo&quot;</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action behavior="PinToImagePoint" id="1" name="Pin to image point" sid="577724508660134" type="cabeza_1">
+                    <param id="0" name="Pin to">colider_jugador</param>
+                    <param id="1" name="ImagePoint">&quot;cabeza&quot;</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="100770463059469">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="846571369946462" type="colider_jugador">
+                    <param id="0" name="Instance variable">lateral</param>
+                </condition>
+                <condition id="8" inverted="1" name="Is flipped" sid="531991492778865" type="brazo1_1" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="481734241557697" type="colider_jugador">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="196637550827179" type="cabeza_1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="308292101048193" type="brazo1_1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="447284479985435" type="brazo1_1">
+                    <param id="0" name="Angle">180-brazo1_1.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129200856274665">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="647079200747127" type="colider_jugador">
+                    <param id="0" name="Instance variable">lateral</param>
+                </condition>
+                <condition id="8" name="Is flipped" sid="234836413796180" type="brazo1_1" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="358565013686908" type="colider_jugador">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="143124847257525" type="cabeza_1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="741055840852157" type="brazo1_1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="941476866931530" type="brazo1_1">
+                    <param id="0" name="Angle">180-brazo1_1.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
