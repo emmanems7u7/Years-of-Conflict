@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 4</name>
+    <events>
+        <event-block sid="245918950340870">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="690212071159989" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="691375465080317" type="Sprite2">
+                    <param id="0" name="Duration">Sprite2.turno</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;movimiento&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="301281712929565">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="801060698055516" type="Sprite2">
+                    <param id="0" name="Tag">&quot;movimiento&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="368791077648144">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="997134248940728" type="Sprite2">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Tween" id="0" name="Tween (one property)" sid="800394843510818" type="Sprite2">
+                            <param id="0" name="Tag">&quot;movimiento&quot;</param>
+                            <param id="1" name="Property">1</param>
+                            <param id="2" name="End value">21</param>
+                            <param id="3" name="Time">1.5</param>
+                            <param id="4" name="Ease">6</param>
+                            <param id="5" name="Destroy on complete">0</param>
+                            <param id="6" name="Loop">0</param>
+                            <param id="7" name="Ping pong">0</param>
+                            <param id="8" name="Repeat count">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="646623004763132">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="538681095019611" type="Sprite2">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Tween" id="0" name="Tween (one property)" sid="232145360171453" type="Sprite2">
+                            <param id="0" name="Tag">&quot;movimiento&quot;</param>
+                            <param id="1" name="Property">0</param>
+                            <param id="2" name="End value">21</param>
+                            <param id="3" name="Time">1.5</param>
+                            <param id="4" name="Ease">6</param>
+                            <param id="5" name="Destroy on complete">0</param>
+                            <param id="6" name="Loop">0</param>
+                            <param id="7" name="Ping pong">0</param>
+                            <param id="8" name="Repeat count">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736772187052978">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="156632165127103" type="Sprite2">
+                            <param id="0" name="Instance variable">direccion</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Tween" id="0" name="Tween (one property)" sid="807654083763931" type="Sprite2">
+                            <param id="0" name="Tag">&quot;movimiento&quot;</param>
+                            <param id="1" name="Property">0</param>
+                            <param id="2" name="End value">304</param>
+                            <param id="3" name="Time">1.5</param>
+                            <param id="4" name="Ease">6</param>
+                            <param id="5" name="Destroy on complete">0</param>
+                            <param id="6" name="Loop">0</param>
+                            <param id="7" name="Ping pong">0</param>
+                            <param id="8" name="Repeat count">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="156255736343016">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="665078435057672" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="PinToImagePoint" id="1" name="Pin to image point" sid="970415071928006" type="brazo1_1">
+                    <param id="0" name="Pin to">colider_jugador</param>
+                    <param id="1" name="ImagePoint">&quot;brazo&quot;</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action behavior="PinToImagePoint" id="1" name="Pin to image point" sid="447501823370857" type="cabeza_1">
+                    <param id="0" name="Pin to">colider_jugador</param>
+                    <param id="1" name="ImagePoint">&quot;cabeza&quot;</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
