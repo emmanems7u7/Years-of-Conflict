@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>tv</name>
     <events>
-        <variable constant="0" name="botones" sid="171663513329462" static="0" type="number">0</variable>
+        <variable constant="0" name="botones" sid="171663513329462" static="0" type="text"></variable>
         <event-block sid="364704272558464">
             <conditions>
                 <condition id="3" name="On touched object" sid="886389301212947" type="Touch">
@@ -257,7 +257,7 @@
                 <event-block sid="323586282313558">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="681893238810144" type="objatras">
-                            <param id="0" name="Unique ID">790</param>
+                            <param id="0" name="Unique ID">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -280,7 +280,7 @@
                             <param id="0" name="Unique ID">7</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="830348618993296" type="objatras">
-                            <param id="0" name="Unique ID">828</param>
+                            <param id="0" name="Unique ID">20</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -330,7 +330,7 @@
                     <param id="0" name="Object">objatras</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="477573451415264" type="objatras">
-                    <param id="0" name="Unique ID">790</param>
+                    <param id="0" name="Unique ID">7</param>
                 </condition>
             </conditions>
             <actions>
@@ -347,7 +347,7 @@
                 <event-block sid="118027911085864">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="994748520291153" type="objatras">
-                            <param id="0" name="Unique ID">790</param>
+                            <param id="0" name="Unique ID">7</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -449,7 +449,7 @@
                 <event-block sid="192927874461334">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="925117751812766" type="objatras">
-                            <param id="0" name="Unique ID">828</param>
+                            <param id="0" name="Unique ID">20</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -529,7 +529,7 @@
                 <event-block sid="167147115225632">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="187764057359134" type="objatras">
-                            <param id="0" name="Unique ID">790</param>
+                            <param id="0" name="Unique ID">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -672,7 +672,7 @@
                 <event-block sid="235261333529856">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="401023792303918" type="logoTV">
-                            <param id="0" name="Unique ID">761</param>
+                            <param id="0" name="Unique ID">96</param>
                         </condition>
                     </conditions>
                     <actions>

@@ -115,35 +115,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="camara" uid="26">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>498</x>
-                        <y>353</y>
-                        <z>0</z>
-                        <width>6</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.333333343</hotspotX>
-                        <hotspotY>0.666666687</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="cabezaNPC" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -425,28 +396,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="casafuera" uid="14">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>1</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>402</x>
-                        <y>175</y>
-                        <z>0</z>
-                        <width>646</width>
-                        <height>115</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="casafuera" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -457,14 +406,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>618</x>
-                        <y>569</y>
+                        <x>408</x>
+                        <y>93</y>
                         <z>0</z>
                         <width>646</width>
                         <height>106</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -615,8 +564,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>809</x>
-                        <y>322</y>
+                        <x>810</x>
+                        <y>319</y>
                         <z>0</z>
                         <width>86</width>
                         <height>106</height>
@@ -662,6 +611,8 @@
                     <instance-variables>
                         <abierto>false</abierto>
                         <dato>0</dato>
+                        <sol_pared>0</sol_pared>
+                        <sol_pared_2>0</sol_pared_2>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -723,6 +674,8 @@
                     <instance-variables>
                         <abierto>false</abierto>
                         <dato>0</dato>
+                        <sol_pared>0</sol_pared>
+                        <sol_pared_2>0</sol_pared_2>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -846,6 +799,48 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="casafuera" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>415</x>
+                        <y>103</y>
+                        <z>0</z>
+                        <width>646</width>
+                        <height>115</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="O_MP" uid="127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>114</x>
+                        <y>-655</y>
+                        <z>0</z>
+                        <width>874</width>
+                        <height>506</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -922,8 +917,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>245</x>
-                        <y>409</y>
+                        <x>348</x>
+                        <y>410</y>
                         <z>0</z>
                         <width>18</width>
                         <height>44</height>
@@ -1721,7 +1716,7 @@
                     </properties>
                     <instance-variables>
                         <saludd>1000</saludd>
-                        <lado>0</lado>
+                        <lado>false</lado>
                         <disparar>0</disparar>
                         <muerto>0</muerto>
                         <crea>0</crea>
@@ -1729,6 +1724,7 @@
                         <colision>false</colision>
                         <cuarto>0</cuarto>
                         <personaje></personaje>
+                        <lado1>0</lado1>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1749,8 +1745,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>522</x>
-                        <y>262</y>
+                        <x>493</x>
+                        <y>380</y>
                         <z>0</z>
                         <width>30</width>
                         <height>41</height>
@@ -1815,6 +1811,69 @@
                         <depth>0</depth>
                         <hotspotX>0.714285731</hotspotX>
                         <hotspotY>0.100000001</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bala" uid="117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>1000</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-63</x>
+                        <y>380</y>
+                        <z>0</z>
+                        <width>11</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0.090909101</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="camara" uid="26">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>597</x>
+                        <y>272</y>
+                        <z>0</z>
+                        <width>6</width>
+                        <height>6</height>
+                        <depth>0</depth>
+                        <hotspotX>0.333333343</hotspotX>
+                        <hotspotY>0.666666687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1884,7 +1943,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>899</x>
+                        <x>886</x>
                         <y>323</y>
                         <z>0</z>
                         <width>8</width>
@@ -1942,8 +2001,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>822</x>
-                        <y>318</y>
+                        <x>819</x>
+                        <y>319</y>
                         <z>0</z>
                         <width>8</width>
                         <height>105</height>
@@ -1956,7 +2015,7 @@
                 </instance>
                 <instance type="solParedIZQ" uid="54">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -2082,7 +2141,7 @@
                         <x>403</x>
                         <y>426</y>
                         <z>0</z>
-                        <width>631.987060547</width>
+                        <width>642</width>
                         <height>5.670257568</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2123,7 +2182,7 @@
                         <x>404</x>
                         <y>312</y>
                         <z>0</z>
-                        <width>631.987060547</width>
+                        <width>641</width>
                         <height>5.670257568</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2164,6 +2223,321 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HUMODIS" uid="118">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <created>0</created>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>5</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-130</x>
+                        <y>64</y>
+                        <z>0</z>
+                        <width>42</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.071428597</hotspotX>
+                        <hotspotY>0.449999988</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="armas" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <agarrando>false</agarrando>
+                        <balas>0</balas>
+                        <capacidad>0</capacidad>
+                        <cargas>0</cargas>
+                        <nombre></nombre>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-155</x>
+                        <y>-19</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>13</height>
+                        <depth>0</depth>
+                        <hotspotX>0.277778</hotspotX>
+                        <hotspotY>0.692308009</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bala_en" uid="120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>1000</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-174</x>
+                        <y>44</y>
+                        <z>0</z>
+                        <width>11</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0.090909101</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="efecto_gas" uid="121">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <opacidad>0</opacidad>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0.9</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-462</x>
+                        <y>-92</y>
+                        <z>0</z>
+                        <width>355</width>
+                        <height>207</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="humo_gas5_PM" uid="122">
+                    <properties>
+                        <rate>20</rate>
+                        <spray-cone>10</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>10</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-182</x>
+                        <y>-130</y>
+                        <z>0</z>
+                        <width>49.617809296</width>
+                        <height>49.617809296</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-3.113764763</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="humo_gas6_PM" uid="123">
+                    <properties>
+                        <rate>20</rate>
+                        <spray-cone>10</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>10</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1.5</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-213</x>
+                        <y>-116</y>
+                        <z>0</z>
+                        <width>49.617809296</width>
+                        <height>49.617809296</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-3.113764763</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="humo_gas_PM" uid="124">
+                    <properties>
+                        <rate>40</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>Continuous spray</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>220</speed>
+                        <size>100</size>
+                        <opacity>50</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1.2</timeout>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-411</x>
+                        <y>-66</y>
+                        <z>0</z>
+                        <width>49.617809296</width>
+                        <height>49.617809296</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-3.113764763</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fondo_sangre" uid="125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>animacion</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-487</x>
+                        <y>-321</y>
+                        <z>0</z>
+                        <width>382.260986328</width>
+                        <height>212</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2191,7 +2565,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <destino>533</destino>
+                        <destino>62</destino>
                         <cuarto>0</cuarto>
                         <d>1</d>
                     </instance-variables>
@@ -2218,7 +2592,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <destino>531</destino>
+                        <destino>61</destino>
                         <cuarto>1</cuarto>
                         <d>0</d>
                     </instance-variables>
@@ -2245,7 +2619,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <destino>744</destino>
+                        <destino>64</destino>
                         <cuarto>1</cuarto>
                         <d>1</d>
                     </instance-variables>
@@ -2272,7 +2646,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <destino>724</destino>
+                        <destino>63</destino>
                         <cuarto>2</cuarto>
                         <d>0</d>
                     </instance-variables>
@@ -2299,8 +2673,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -3066,7 +3440,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>98</x>
+                        <x>192</x>
                         <y>-43</y>
                         <z>0</z>
                         <width>172</width>
@@ -3288,6 +3662,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="ArrayGenerico" uid="128">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

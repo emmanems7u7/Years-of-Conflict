@@ -69,7 +69,101 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="cabeza_bomb" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ANGULO>0</ANGULO>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>174.592056274</x>
+                        <y>231.644943237</y>
+                        <z>0</z>
+                        <width>23</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.478260994</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="cuerpoAnimB" uid="130">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>run1</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <saludd>10</saludd>
+                        <lado></lado>
+                        <lateral>0</lateral>
+                        <cabeza>0</cabeza>
+                        <cuerpo>0</cuerpo>
+                        <espejo>0</espejo>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>300</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>172.111465454</x>
+                        <y>275.175598145</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>41</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512194991</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="brazobombero" uid="131">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>b</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>149.865249634</x>
+                        <y>230.759231567</y>
+                        <z>0</z>
+                        <width>38</width>
+                        <height>17</height>
+                        <depth>0</depth>
+                        <hotspotX>0.28947401</hotspotX>
+                        <hotspotY>0.0588235</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
     </layers>

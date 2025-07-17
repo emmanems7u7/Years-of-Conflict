@@ -84,7 +84,7 @@
                     </properties>
                     <instance-variables>
                         <saludd>1000</saludd>
-                        <lado>0</lado>
+                        <lado>false</lado>
                         <disparar>0</disparar>
                         <muerto>0</muerto>
                         <crea>0</crea>
@@ -92,6 +92,7 @@
                         <colision>false</colision>
                         <cuarto>0</cuarto>
                         <personaje></personaje>
+                        <lado1>0</lado1>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

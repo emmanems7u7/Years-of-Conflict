@@ -10,8 +10,11 @@
     <unique-id>zsey0dp0ng7d</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -19,12 +22,14 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Rex.Rainbow" id="Rex_Platform_MoveTo" version="0.100000001">Platform MoveTo</behavior>
         <behavior author="Rex.Rainbow" id="Rex_RotateTo" version="0.100000001">RotateTo</behavior>
         <behavior author="Rex.Rainbow" id="Rex_pin2imgpt" version="1">Pin to image point</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -34,8 +39,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>340</width>
-        <height>149</height>
+        <width>370</width>
+        <height>197</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -44,7 +49,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Any</prop>
@@ -1033,9 +1038,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="884809717128802" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Desktop\archivos2024\casa\asd.png">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Emanuel\Desktop\archivos2024\casa\asd.png">
                             <image-point name="puerta" x="0.472136" y="0.801887" />
                             <image-point name="pisoarriba" x="0" y="0" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                         <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Emanuel\Desktop\casa\casa copia.png">
                             <collision-poly>
@@ -1102,6 +1108,7 @@
                             <image-point name="puerta2" x="0.294118" y="0.698113" />
                             <image-point name="pared1" x="0" y="0" />
                             <image-point name="pared2" x="0.986068" y="0" />
+                            <image-point name="casa_fuera" x="0" y="0" />
                         </frame>
                         <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Emanuel\Desktop\casa\psio1.png">
                             <image-point name="pared1" x="0" y="0" />
@@ -1172,6 +1179,8 @@
                 <instance-variables>
                     <instance-variable name="abierto" sid="598860919424494" type="boolean" />
                     <instance-variable name="dato" sid="394773691934798" type="number" />
+                    <instance-variable name="sol_pared" sid="784844214977793" type="number" />
+                    <instance-variable name="sol_pared_2" sid="236293776427923" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828307578629827" speed="0">
@@ -1781,7 +1790,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="saludd" sid="709919606772608" type="number" />
-                    <instance-variable name="lado" sid="760183272147575" type="number" />
+                    <instance-variable name="lado" sid="760183272147575" type="boolean" />
                     <instance-variable name="disparar" sid="166696556171952" type="number" />
                     <instance-variable name="muerto" sid="317918421717864" type="number" />
                     <instance-variable name="crea" sid="885008548272296" type="number" />
@@ -1789,6 +1798,7 @@
                     <instance-variable name="colision" sid="767199697605101" type="boolean" />
                     <instance-variable name="cuarto" sid="562809742316742" type="number" />
                     <instance-variable name="personaje" sid="714494950451963" type="string" />
+                    <instance-variable name="lado1" sid="980532872666897" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="371938313207607">
@@ -1804,6 +1814,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0487805" />
                                 <image-point name="C" x="0.533333" y="0.243902" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.458333" y="0" />
                                     <point x="0.641667" y="0" />
@@ -1817,6 +1828,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0731707" />
                                 <image-point name="C" x="0.533333" y="0.268293" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.433333" y="0" />
                                     <point x="0.629167" y="0" />
@@ -1830,6 +1842,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.097561" />
                                 <image-point name="C" x="0.533333" y="0.292683" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.458333" y="0" />
                                     <point x="0.629167" y="0" />
@@ -1843,6 +1856,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.097561" />
                                 <image-point name="C" x="0.533333" y="0.292683" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.445833" y="0" />
                                     <point x="0.625" y="0" />
@@ -1856,6 +1870,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0731707" />
                                 <image-point name="C" x="0.533333" y="0.268293" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.445833" y="0" />
                                     <point x="0.633333" y="0" />
@@ -1869,6 +1884,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0487805" />
                                 <image-point name="C" x="0.533333" y="0.243902" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.45" y="0" />
                                     <point x="0.6375" y="0" />
@@ -1882,6 +1898,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0731707" />
                                 <image-point name="C" x="0.533333" y="0.268293" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.4375" y="0" />
                                     <point x="0.6375" y="0" />
@@ -1895,6 +1912,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.097561" />
                                 <image-point name="C" x="0.533333" y="0.292683" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.4375" y="0" />
                                     <point x="0.625" y="0" />
@@ -1908,6 +1926,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0731707" />
                                 <image-point name="C" x="0.533333" y="0.268293" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.4375" y="0" />
                                     <point x="0.6375" y="0" />
@@ -1921,6 +1940,7 @@
                                 <image-point name="cabeza" x="0.533333" y="0.0487805" />
                                 <image-point name="C" x="0.533333" y="0.243902" />
                                 <image-point name="mensaje" x="0" y="0.0731707" />
+                                <image-point name="camara" x="3.8" y="0.365854" />
                                 <collision-poly>
                                     <point x="0.416666" y="0" />
                                     <point x="0.691667" y="0" />
@@ -1936,6 +1956,7 @@
                                 <image-point name="cabeza" x="0.555556" y="0.159091" />
                                 <image-point name="C" x="0.555556" y="0.340909" />
                                 <image-point name="mensaje" x="0" y="0.0681818" />
+                                <image-point name="camara" x="6.33333" y="0.340909" />
                             </frame>
                             <frame duration="1" hotspotX="0.555556" hotspotY="0.204545">
                                 <image-point name="brazo1" x="0.111111" y="0.159091" />
@@ -1943,6 +1964,7 @@
                                 <image-point name="cabeza" x="0.555556" y="0.136364" />
                                 <image-point name="C" x="0.555556" y="0.318182" />
                                 <image-point name="mensaje" x="0" y="0.0681818" />
+                                <image-point name="camara" x="6.33333" y="0.340909" />
                             </frame>
                             <frame duration="1" hotspotX="0.555556" hotspotY="0.204545">
                                 <image-point name="brazo1" x="0.111111" y="0.136364" />
@@ -1950,6 +1972,7 @@
                                 <image-point name="cabeza" x="0.555556" y="0.113636" />
                                 <image-point name="C" x="0.555556" y="0.295455" />
                                 <image-point name="mensaje" x="0" y="0.0681818" />
+                                <image-point name="camara" x="6.33333" y="0.340909" />
                             </frame>
                             <frame duration="1" hotspotX="0.555556" hotspotY="0.204545">
                                 <image-point name="brazo1" x="0.111111" y="0.159091" />
@@ -1957,6 +1980,7 @@
                                 <image-point name="cabeza" x="0.555556" y="0.136364" />
                                 <image-point name="C" x="0.555556" y="0.318182" />
                                 <image-point name="mensaje" x="0" y="0.0681818" />
+                                <image-point name="camara" x="6.33333" y="0.340909" />
                             </frame>
                         </animation>
                     </animation-folder>
@@ -9721,8 +9745,521 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="bala" sid="240963717789184">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="394159328994058">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876441074437639" speed="0">
+                    <frame duration="1" hotspotX="0.0909091" hotspotY="0.5" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\balaoficial.png">
+                        <collision-poly>
+                            <point x="0.829457" y="0.44" />
+                            <point x="0.844961" y="0.5" />
+                            <point x="0.829457" y="0.56" />
+                            <point x="0.511628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUMODIS" sid="824308423938166">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="created" sid="552175792450806" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="754361487054743">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="34" loop="0" name="ANIM" pingpong="0" repeatcount="1" repeatto="0" sid="878824320578373" speed="30">
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.45" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="armas" sid="717351159375577">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="agarrando" sid="404194685026343" type="boolean" />
+                <instance-variable name="balas" sid="586709799324145" type="number" />
+                <instance-variable name="capacidad" sid="646328836636941" type="number" />
+                <instance-variable name="cargas" sid="813663670388929" type="number" />
+                <instance-variable name="nombre" sid="810534753502052" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="505185090091558">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="M_16" pingpong="0" repeatcount="1" repeatto="0" sid="351143914761200" speed="0">
+                    <frame duration="1" hotspotX="0.277778" hotspotY="0.692308" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\policias\brazo ARmado\0 copia.png">
+                        <image-point name="Imagepoint 1" x="0.444444" y="0.461538" />
+                        <image-point name="Imagepoint 2" x="0.972222" y="0.384615" />
+                        <collision-poly>
+                            <point x="0.245823" y="0.265043" />
+                            <point x="0.373832" y="0" />
+                            <point x="1" y="0.350877" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.307018" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="FAL" pingpong="0" repeatcount="1" repeatto="0" sid="663819749356771" speed="5">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.555556" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\armas\fal.png">
+                        <collision-poly>
+                            <point x="0" y="0.625" />
+                            <point x="0.489362" y="0.111111" />
+                            <point x="0.957447" y="0.222222" />
+                            <point x="0.970745" y="0.444444" />
+                            <point x="0.470745" y="0.458333" />
+                            <point x="0.339096" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bala_en" sid="688498259041623">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="475409088538194">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932860557630268" speed="0">
+                    <frame duration="1" hotspotX="0.0909091" hotspotY="0.5" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\balaoficial.png">
+                        <collision-poly>
+                            <point x="0.829457" y="0.44" />
+                            <point x="0.844961" y="0.5" />
+                            <point x="0.829457" y="0.56" />
+                            <point x="0.511628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="efecto_gas" sid="147072154740970">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="opacidad" sid="638691700828626" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="595961098523555">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="humo_gas_PM" sid="406436079004988">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Fade" sid="982025765766214">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Emanuel\Desktop\AS.png" />
+        </object-type>
+        <object-type name="humo_gas6_PM" sid="170459340097195">
+            <plugin id="Particles" />
+            <texture original-source="C:\Users\Emanuel\Desktop\1.png" />
+        </object-type>
+        <object-type name="humo_gas5_PM" sid="298027802156919">
+            <plugin id="Particles" />
+            <texture original-source="C:\Users\Emanuel\Desktop\AS.png" />
+        </object-type>
+        <object-type name="fondo_sangre" sid="176282878957962">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="848293321893900">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="animacion" pingpong="0" repeatcount="1" repeatto="0" sid="832962484004111" speed="2.5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Emanuel\Desktop\1fond.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="448865241899077">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="O_MP" sid="975023026085005">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\emanuel\Desktop\12a.png" />
+        </object-type>
+        <object-type global="1" name="ArrayGenerico" sid="942109853367214">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="cabeza_bomb" sid="504973846863067">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ANGULO" sid="684377859787651" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="a0" pingpong="0" repeatcount="1" repeatto="0" sid="398644133427184" speed="8">
+                    <frame duration="5" hotspotX="0.478261" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.478261" hotspotY="1" />
+                </animation>
+                <animation framecount="2" loop="1" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="926795316403775" speed="8">
+                    <frame duration="5" hotspotX="0.578947" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.578947" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cuerpoAnimB" sid="968438030048139">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="saludd" sid="859979919158477" type="number" />
+                <instance-variable name="lado" sid="701623849807831" type="string" />
+                <instance-variable name="lateral" sid="342616806178879" type="number" />
+                <instance-variable name="cabeza" sid="375819473765418" type="number" />
+                <instance-variable name="cuerpo" sid="440623020096410" type="number" />
+                <instance-variable name="espejo" sid="872219265245900" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="911464511386495">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="idle1" pingpong="0" repeatcount="1" repeatto="0" sid="686908071374171" speed="8">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.619048" y="0.097561" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.619048" y="0.0731707" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.619048" y="0.0731707" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.619048" y="0.097561" />
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="idle2" pingpong="0" repeatcount="1" repeatto="0" sid="898320098673705" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.555556" y="0.097561" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.555556" y="0.0731707" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.555556" y="0.0487805" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="Imagepoint 1" x="0.555556" y="0.0731707" />
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="1" name="run1" pingpong="0" repeatcount="1" repeatto="0" sid="781729761152568" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.233333" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\policias\runb.gif">
+                        <image-point name="brazo1" x="0.233333" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="1" name="run2" pingpong="0" repeatcount="1" repeatto="0" sid="183547539833585" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\Emanuel\Desktop\ARCHIVOS OFICIALES\policias\runsds.png">
+                        <image-point name="brazo1" x="0.2" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.0731707" />
+                        <image-point name="cabeza" x="0.533333" y="0.0487805" />
+                        <image-point name="brazo2" x="0.7" y="0.0731707" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.121951" />
+                        <image-point name="cabeza" x="0.533333" y="0.097561" />
+                        <image-point name="brazo2" x="0.7" y="0.121951" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195">
+                        <image-point name="brazo1" x="0.2" y="0.097561" />
+                        <image-point name="cabeza" x="0.533333" y="0.0731707" />
+                        <image-point name="brazo2" x="0.7" y="0.097561" />
+                        <collision-poly>
+                            <point x="0.433333" y="0" />
+                            <point x="0.633333" y="0" />
+                            <point x="0.633333" y="1" />
+                            <point x="0.433333" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="brazobombero" sid="900005187737184">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="1" name="b2" pingpong="0" repeatcount="1" repeatto="0" sid="877287479575380" speed="15">
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.212121" hotspotY="0.0666667" />
+                    <frame duration="1" hotspotX="0.148148" hotspotY="0.0714286" />
+                    <frame duration="1" hotspotX="0.25" hotspotY="0.0833333" />
+                    <frame duration="1" hotspotX="0.153846" hotspotY="0.111111" />
+                    <frame duration="1" hotspotX="0.0714286" hotspotY="0.125" />
+                    <frame duration="1" hotspotX="0.153846" hotspotY="0.125" />
+                    <frame duration="1" hotspotX="0.25" hotspotY="0.0833333" />
+                    <frame duration="1" hotspotX="0.148148" hotspotY="0.0714286" />
+                    <frame duration="1" hotspotX="0.212121" hotspotY="0.0666667" />
+                </animation>
+                <animation framecount="10" loop="1" name="b" pingpong="0" repeatcount="1" repeatto="0" sid="998295360698897" speed="15">
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.263158" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.236842" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.210526" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.236842" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.263158" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                    <frame duration="1" hotspotX="0.289474" hotspotY="0.0588235" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="tocar" plugin-id="Sprite" sid="128673349386619">
+            <members>
+                <member>b_continuar</member>
+                <member>b_pause</member>
+                <member>b_reiniciar</member>
+                <member>b_salir</member>
+                <member>boton</member>
+                <member>btn_bomba</member>
+                <member>btn_mano</member>
+                <member>disparar</member>
+                <member>gamepad</member>
+                <member>gamepad_middle</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
         <layout>lvl1.xml</layout>
@@ -9740,6 +10277,10 @@
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>ev_personaje.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>UI.xml</event-sheet>
+        <event-sheet>pausa.xml</event-sheet>
+        <event-sheet>mensajes.xml</event-sheet>
+        <event-sheet>amotinados.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="109">
@@ -9762,8 +10303,58 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Keyboard" uid="126" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <sound-folder name="disparo">
+            <file name="disparoFAL.ogg" />
+            <file name="disparoGAS.ogg" />
+            <file name="disparoM16.ogg" />
+        </sound-folder>
+        <sound-folder name="impacto">
+            <file name="impacto2.ogg" />
+            <file name="impacto3.ogg" />
+            <file name="impacto4.ogg" />
+        </sound-folder>
+        <sound-folder name="muere">
+            <file name="0m.ogg" />
+            <file name="1m.ogg" />
+            <file name="2m.ogg" />
+            <file name="3m.ogg" />
+        </sound-folder>
+        <sound-folder name="NPC">
+            <sound-folder name="señorlvl1">
+                <file name="s1.ogg" />
+                <file name="s2.ogg" />
+                <file name="s3.ogg" />
+                <file name="s4.ogg" />
+            </sound-folder>
+        </sound-folder>
+        <sound-folder name="paso">
+            <file name="0PASODER.ogg" />
+            <file name="0PASOIZQ.ogg" />
+            <file name="1PASODER.ogg" />
+            <file name="1PASOIZQ.ogg" />
+        </sound-folder>
+        <sound-folder name="tv">
+            <file name="g1.ogg" />
+            <file name="g10.ogg" />
+            <file name="g11.ogg" />
+            <file name="g12.ogg" />
+            <file name="g13.ogg" />
+            <file name="g2.ogg" />
+            <file name="g3.ogg" />
+            <file name="g4.ogg" />
+            <file name="g5.ogg" />
+            <file name="g6.ogg" />
+            <file name="g7.ogg" />
+            <file name="g8.ogg" />
+            <file name="g9.ogg" />
+            <file name="noticia2.ogg" />
+            <file name="noticiainicio.ogg" />
+            <file name="noticieroFondo.ogg" />
+        </sound-folder>
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

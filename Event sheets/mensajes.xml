@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mensajes</name>
+    <events>
+        <variable constant="0" name="mensajepm" sid="975807347995072" static="0" type="number">0</variable>
+        <event-group description="" sid="191797720342187" title="mensaje pm">
+            <sub-events>
+                <event-block sid="871299888634464">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="261188932769488" type="System">
+                            <param id="0" name="Variable">mensajepm</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="838260565914328" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="420208369941747" type="System">
+                            <param id="0" name="Variable">mensajepm</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582665990431956">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="793181201481575" type="System">
+                            <param id="0" name="Variable">mensajepm</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="562009403797177" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="249753064338244">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="833076756191769" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="910782129569187" type="mision_principal1" />
+                <action id="-9" name="Destroy" sid="274470128694538" type="mision_secundaria1" />
+            </actions>
+        </event-block>
+        <event-block sid="737649167637498">
+            <conditions>
+                <condition id="3" name="On touched object" sid="854432599673537" type="Touch">
+                    <param id="0" name="Object">b_pause</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="113199532816111">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="459252155284322" type="System">
+                            <param id="0" name="Variable">OBJETIVOEXISTE</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="841410795233223" type="funcion">
+                            <param id="0" name="Name">&quot;creaObjetivoP&quot;</param>
+                            <param id="1" name="Parameter {n}">MPCumplida</param>
+                        </action>
+                        <action id="0" name="Call function" sid="958958875273106" type="funcion">
+                            <param id="0" name="Name">&quot;creaObjetivoS&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="128219276881031">
+            <conditions>
+                <condition id="0" name="On function" sid="615651740126907" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivoP&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="873082265993621" type="System">
+                    <param id="0" name="Object to create">mision_principal1</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">19</param>
+                </action>
+                <action id="-10" name="Set value" sid="758452148692640" type="mision_principal1">
+                    <param id="0" name="Instance variable">ver</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="266980479710768" type="mision_principal1">
+                    <param id="0" name="Animation">&quot;N&quot;&amp;nivel</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="246195041587175" type="mision_principal1">
+                    <param id="0" name="Frame number">funcion.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="782314641198795">
+            <conditions>
+                <condition id="0" name="On function" sid="768002222792217" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivoS&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="posAnt" sid="247646365602352" static="0" type="number">45</variable>
+                <event-block sid="150861338769031">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="235156088566026" type="System">
+                            <param id="0" name="Count">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="825248238614207" type="System">
+                            <param id="0" name="Object to create">mision_secundaria1</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">posAnt</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="625354552361639" type="System">
+                            <param id="0" name="Variable">posAnt</param>
+                            <param id="1" name="Value">22</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="801372878225155">
+            <conditions>
+                <condition id="0" name="On function" sid="789161926279604" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjetivosSArray&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="822784066663897" type="ArrayGenerico">
+                    <param id="0" name="Width">funcion.Param(0)-1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="c" sid="915327174202964" static="0" type="number">0</variable>
+                <event-block sid="175434336291082">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="151220071211059" type="System">
+                            <param id="0" name="Count">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Insert" sid="105849981725375" type="ArrayGenerico">
+                            <param id="0" name="Value">0</param>
+                            <param id="1" name="Index">c</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="236188033797662" type="System">
+                            <param id="0" name="Variable">c</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="188358577198862" title="mens">
+            <sub-events>
+                <event-block sid="843893155091690">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="466680891782848" type="mision_principal1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-85</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="476889210716546" type="mision_principal1" />
+                    </actions>
+                </event-block>
+                <event-block sid="574139748246885">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="955000500953463" type="mision_secundaria1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-85</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="818981686681432" type="mision_secundaria1" />
+                    </actions>
+                </event-block>
+                <comment>ver = 0 para que retroceda hasta donde no se vea</comment>
+                <event-block sid="231652531696085">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="276837106876962" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="865340334591565" type="mision_principal1">
+                            <param id="0" name="X">lerp(self.X,-87,0.15)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="255502309224130">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="580322266527467" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="295944740447740" type="mision_secundaria1">
+                            <param id="0" name="X">lerp(self.X,-87,0.15)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ver = 1 para que aparezca en pantalla</comment>
+                <event-block sid="423018027058374">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="480135574879241" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="952701463230098" type="mision_principal1">
+                            <param id="0" name="X">lerp(self.X,3,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="852158699552176">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="965241466877683" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="703300590422862" type="mision_secundaria1">
+                            <param id="0" name="X">lerp(self.X,3,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ver = 2 para que aparezca en pantalla</comment>
+                <event-block sid="300846848365371">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="841406763870881" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="427641623620434" type="mision_principal1">
+                            <param id="0" name="X">lerp(self.X,3,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="540175863601945">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="484823148709002" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="950054455064508" type="mision_secundaria1">
+                            <param id="0" name="X">lerp(self.X,3,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843377478289712">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="684893622311205" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="583418571023903" type="mision_principal1">
+                            <param id="0" name="X">lerp(self.X,0,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="759466268397348">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="471700457097678" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="322824538710917" type="mision_secundaria1">
+                            <param id="0" name="X">lerp(self.X,0,0.4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222518166794633">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="619305104380443" type="mision_principal1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">2.5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="454751424026379" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="332948067989865" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="674602931720971" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="958204611948542">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="795504887891630" type="mision_principal1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">2.5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="880590641452362" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="442930243027415" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="296313796586118" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377249967029602">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="982638724762185" type="mision_secundaria1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">2.5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="877524291774792" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="889629569201781" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614931447459208">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="614846454375048" type="mision_secundaria1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">2.5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="419158181683286" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="629267588177238" type="mision_secundaria1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="276905186117806">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="797301517233785" type="O_MP" />
+                <condition id="-14" name="Compare variable" sid="865134890189159" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="491088907588597" type="System">
+                    <param id="0" name="Variable">botones</param>
+                    <param id="1" name="Value">&quot;no&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="237846017483484">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="450927675343438" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="799589918489130" type="funcion">
+                            <param id="0" name="Name">&quot;creaObjP&quot;</param>
+                            <param id="1" name="Parameter {n}">MPCumplida{###}0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="905404546419178" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="581035920502847" type="funcion">
+                            <param id="0" name="Name">&quot;creaObjS&quot;</param>
+                            <param id="1" name="Parameter {n}">arrayGenerico.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="149277105122641">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="462274915263267" type="misionPrinAviso">
+                            <param id="0" name="Instance variable">M</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;principal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="358079168726285" type="misionPrinAviso">
+                            <param id="0" name="Width">lerp(self.Width,78,0.5)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="757009559126990" type="misionPrinAviso">
+                            <param id="0" name="Opacity">lerp(self.Opacity,100,0.3)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="136525170439867" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="869683035914977" type="misionPrinAviso">
+                            <param id="0" name="Instance variable">cumplida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="274515463647218">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="864369304315724" type="misionPrinAviso">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">4</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="589815094161191" type="misionPrinAviso">
+                    <param id="0" name="Instance variable">cumplida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="199774069635986" type="System">
+                    <param id="0" name="Object to create">reiniciarB</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="134724974212885" type="System">
+                    <param id="0" name="Object to create">VICTORIA_3</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="511863676853755" type="misionPrinAviso">
+                    <param id="0" name="Animation">&quot;MP&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="466078687939133">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="656605358725354" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="340569036406461" type="misionPrinAviso">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="698609553197108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="389766814097319" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="136946711997924" type="misionPrinAviso">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="460514097512493">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="889718689137335" type="VICTORIA_3" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="697910510205659" type="VICTORIA_3">
+                    <param id="0" name="Width">lerp(self.width,60,0.1)</param>
+                    <param id="1" name="Height">lerp(self.height,60,0.1)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="788714612902384" type="VICTORIA_3">
+                    <param id="0" name="Opacity">lerp(self.Opacity,0,0.03)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="187552013045303">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="265584349737940" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="263508965749948" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="728006301652947" type="System">
+                    <param id="0" name="Object to create">O_MP</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="388572556548055" type="O_MP">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465509329367708">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="869191456813049" type="Keyboard">
+                    <param id="0" name="Key">81</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="729646961182757" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="474115048080592" type="System">
+                    <param id="0" name="Variable">MPCumplida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="875810122600843">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="102123080386153" type="System">
+                            <param id="0" name="Variable">NivelFinalizado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="377362321955672" type="System">
+                            <param id="0" name="Object to create">O_MP</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="150964092461007" type="O_MP">
+                            <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="935489266498676">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="654191104287327" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="314908631793907" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="741979132814481">
+            <conditions>
+                <condition id="-18" name="On created" sid="450704981677250" type="reiniciarB" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="629855645157782" type="reiniciarB">
+                    <param id="0" name="Object">misionPrinAviso</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="669166562783668" type="VICTORIA_3">
+                    <param id="0" name="Object">misionPrinAviso</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="446968842233949" type="VICTORIA_3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="233122789853064" type="reiniciarB">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="948368915700373" type="reiniciarB">
+                    <param id="0" name="Instance variable">c</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="404220915321602">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="143160514136727" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="986104048033348" type="reiniciarB">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="578928439131330" type="VICTORIA_3">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="177921936250374">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="361744653330027" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="418082724953635" type="reiniciarB">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="502948182532927" type="VICTORIA_3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="333319775440278">
+            <conditions>
+                <condition id="-18" name="On created" sid="167564398435458" type="VICTORIA_3" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="774766408749185">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="364115630545748" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="974052343536728">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="813847449806829" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="799101345154568">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="264367776019922" type="reiniciarB">
+                    <param id="0" name="Instance variable">c</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="292029336177829" type="reiniciarB">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.6)</param>
+                </action>
+                <action id="-7" name="Set size" sid="679109002025128" type="reiniciarB">
+                    <param id="0" name="Width">lerp(self.Width,15,0.5)</param>
+                    <param id="1" name="Height">lerp(self.Height,15,0.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="993133516390052">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="557543922419216" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="761295642905146" type="reiniciarB" />
+                <action id="-9" name="Destroy" sid="721200970487547" type="VICTORIA_3" />
+                <action id="-9" name="Destroy" sid="139909917718967" type="misionPrinAviso" />
+                <action id="-9" name="Destroy" sid="786675593830988" type="misionSecaviso" />
+            </actions>
+        </event-block>
+        <event-block sid="176587496790622">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="309131855082211" type="Keyboard">
+                    <param id="0" name="Key">81</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="288780547314955" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="321455495329763" type="System">
+                    <param id="0" name="Variable">MPCumplida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="510212470597705">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="862313730081029" type="System">
+                            <param id="0" name="Variable">NivelFinalizado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="456797230941236" type="System">
+                            <param id="0" name="Object to create">O_MP</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="889028050233049" type="O_MP">
+                            <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="207297784525320">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="742550466047033" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="546420791773808" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="157296914764899">
+            <conditions>
+                <condition id="-18" name="On created" sid="383898019942074" type="reiniciarB" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="877480757005104" type="reiniciarB">
+                    <param id="0" name="Object">misionPrinAviso</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="833024604844399" type="VICTORIA_3">
+                    <param id="0" name="Object">misionPrinAviso</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="935863425952376" type="VICTORIA_3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="501787882447481" type="reiniciarB">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="970449428954222" type="reiniciarB">
+                    <param id="0" name="Instance variable">c</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="544976410558532">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="925389357815673" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="509168050606419" type="reiniciarB">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="886463839462198" type="VICTORIA_3">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483938415727822">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="509669407356868" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="334526256594897" type="reiniciarB">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="258731318409736" type="VICTORIA_3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="695075732256309">
+            <conditions>
+                <condition id="-18" name="On created" sid="413357887828281" type="VICTORIA_3" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="893820386750687">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="519342211266067" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="772061251271387">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="968824098156292" type="System">
+                            <param id="0" name="Variable">MPCumplida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="220225580435582">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="173731165276253" type="reiniciarB">
+                    <param id="0" name="Instance variable">c</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="210718713266313" type="reiniciarB">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.6)</param>
+                </action>
+                <action id="-7" name="Set size" sid="559991200161435" type="reiniciarB">
+                    <param id="0" name="Width">lerp(self.Width,15,0.5)</param>
+                    <param id="1" name="Height">lerp(self.Height,15,0.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348787249855308">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="183842406468200" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="827537766854526" type="reiniciarB" />
+                <action id="-9" name="Destroy" sid="116800505075738" type="VICTORIA_3" />
+                <action id="-9" name="Destroy" sid="242978357200295" type="misionPrinAviso" />
+                <action id="-9" name="Destroy" sid="588273023318154" type="misionSecaviso" />
+            </actions>
+        </event-block>
+        <event-block sid="215327278988805">
+            <conditions>
+                <condition id="0" name="On function" sid="765300323987036" type="funcion">
+                    <param id="0" name="Name">&quot;mensajes&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="640257473855210">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="987690666557399" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PM&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="712994521266391" type="System">
+                            <param id="0" name="Object to create">textoT</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">180</param>
+                            <param id="3" name="Y">83</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="915965478276228" type="textoT">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">10</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="546809658626735" type="textoT">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="683919103069394" type="textoT">
+                            <param id="0" name="Instance variable">sw</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="776505861082638" type="textoT">
+                            <param id="0" name="Instance variable">aviso</param>
+                            <param id="1" name="Value">&quot;PMCerca&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="793464959095492">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="978718577494294" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;conducir&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="524974552447581" type="System">
+                            <param id="0" name="Object to create">textoT</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">180</param>
+                            <param id="3" name="Y">83</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="248142423986648" type="textoT">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">10</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="179618465633216" type="textoT">
+                            <param id="0" name="Animation">funcion.Param(0)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="347147973474458" type="textoT">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="398036489184527" type="textoT">
+                            <param id="0" name="Instance variable">sw</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="833539519049321" type="textoT">
+                            <param id="0" name="Instance variable">aviso</param>
+                            <param id="1" name="Value">funcion.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="764882727936646">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="705947339526054" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;cont&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="510704991245530" type="System">
+                            <param id="0" name="Object to create">textoT</param>
+                            <param id="1" name="Layer">&quot;JUGADOR&quot;</param>
+                            <param id="2" name="X">cuerpoP.X+20</param>
+                            <param id="3" name="Y">cuerpoP.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="116776271244584" type="textoT">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="845921194689131" type="textoT">
+                            <param id="0" name="Instance variable">aviso</param>
+                            <param id="1" name="Value">&quot;cont&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="140246793073640" type="textoT">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="288077322575235" type="textoT">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="433433884208791">
+            <conditions>
+                <condition id="0" name="On function" sid="728938756834433" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjP&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="618332781900413" type="System">
+                    <param id="0" name="Object to create">misionPrinAviso</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">19</param>
+                </action>
+                <action id="-10" name="Set value" sid="815018956814161" type="misionPrinAviso">
+                    <param id="0" name="Instance variable">M</param>
+                    <param id="1" name="Value">&quot;principal&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="543166430213703">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="888185874766400" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="662705562480166" type="misionPrinAviso">
+                            <param id="0" name="Animation">&quot;animMc&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="743409367363702">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="572807643381591" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="857358529142735" type="misionPrinAviso">
+                            <param id="0" name="Animation">&quot;animMc&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="931315327806528">
+            <conditions>
+                <condition id="0" name="On function" sid="280418095670049" type="funcion">
+                    <param id="0" name="Name">&quot;creaObjS&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="posA" sid="590060273014417" static="0" type="number">41</variable>
+                <variable constant="0" name="c" sid="913874709200140" static="0" type="number">0</variable>
+                <event-block sid="594094930974507">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="463580943067451" type="System">
+                            <param id="0" name="Count">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="352315975535425" type="System">
+                            <param id="0" name="Object to create">misionSecaviso</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">posA</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="186828826628453" type="System">
+                            <param id="0" name="Variable">posA</param>
+                            <param id="1" name="Value">19</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="842776006462545">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="176573883506117" type="ArrayGenerico">
+                                    <param id="0" name="X">c</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="419483630383170" type="misionSecaviso">
+                                    <param id="0" name="Animation">&quot;animMF&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="571383117613769">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="444280033361451" type="ArrayGenerico">
+                                    <param id="0" name="X">c</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="236859860938340" type="misionSecaviso">
+                                    <param id="0" name="Animation">&quot;animMc&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="135926067986873">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="673076883903407" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="692359149482048" type="System">
+                                    <param id="0" name="Variable">c</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="884677817606591">
+            <conditions>
+                <condition id="-18" name="On created" sid="114082643866546" type="misionPrinAviso" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="425086009772884" type="misionPrinAviso">
+                    <param id="0" name="Width">0</param>
+                </action>
+                <action id="-5" name="Set width" sid="356826006209890" type="misionSecaviso">
+                    <param id="0" name="Width">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="365073288690147">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="830537590233374" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="335537341909955" type="mision_principal1" />
+                <action id="-9" name="Destroy" sid="461702467481864" type="mision_secundaria1" />
+                <action id="-9" name="Destroy" sid="554585452901940" type="misionPrinAviso" />
+                <action id="-9" name="Destroy" sid="598143237607470" type="misionSecaviso" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

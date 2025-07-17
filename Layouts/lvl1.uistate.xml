@@ -4,18 +4,18 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>254.674</position-x>
-        <position-y>358.376</position-y>
-        <position-z>26.1376</position-z>
-        <lookat-x>254.674</lookat-x>
-        <lookat-y>358.376</lookat-y>
+        <position-x>2033.89</position-x>
+        <position-y>198.587</position-y>
+        <position-z>177.037</position-z>
+        <lookat-x>2033.89</lookat-x>
+        <lookat-y>198.587</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
     <show-grid>0</show-grid>
     <snap-width>1</snap-width>
     <snap-height>1</snap-height>
-    <show-collision-polys>0</show-collision-polys>
+    <show-collision-polys>1</show-collision-polys>
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
         <property expanded="1" name="Layout properties" />
@@ -23,14 +23,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="pared" />
+    <active-layer name="botones" />
     <layers>
         <layer locked="0" name="suelo" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="casas" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="JUGADOR" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="pared" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="joystick" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="botones" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="UI" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="pared" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="joystick" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="botones" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="UI" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

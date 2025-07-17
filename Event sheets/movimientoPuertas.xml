@@ -120,7 +120,7 @@
                         <event-block sid="512315346385631">
                             <conditions>
                                 <condition id="-14" inverted="1" name="Pick by unique ID" sid="705215313968996" type="OBJPOSICION">
-                                    <param id="0" name="Unique ID">531</param>
+                                    <param id="0" name="Unique ID">61</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -151,7 +151,7 @@
                         <event-block sid="871555314352469">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="544547477269369" type="OBJPOSICION">
-                                    <param id="0" name="Unique ID">531</param>
+                                    <param id="0" name="Unique ID">61</param>
                                 </condition>
                             </conditions>
                             <actions>

@@ -3,14 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>lvl1</name>
     <events>
+        <include>handy</include>
+        <include>mensajes</include>
+        <include>NPCPersona</include>
+        <include>tv</include>
+        <include>movimientoPuertas</include>
+        <include>ev_personaje</include>
+        <include>pausa</include>
+        <include>UI</include>
         <variable constant="0" name="personaje" sid="391051168095730" static="0" type="number">0</variable>
         <variable constant="0" name="nivel" sid="223834047116544" static="0" type="number">0</variable>
         <variable constant="0" name="OBJETIVOEXISTE" sid="440290318107876" static="0" type="number">0</variable>
-        <include>handy</include>
-        <include>NPCPersona</include>
         <variable constant="0" name="camblvl1" sid="804523691602670" static="0" type="number">0</variable>
-        <include>tv</include>
-        <include>movimientoPuertas</include>
         <event-block sid="134319445552477">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="886113339337595" type="System" />
@@ -38,40 +42,102 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="987444146680059">
+                <event-block sid="917992946723801">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="578826974352772" type="solParedIZQ">
-                            <param id="0" name="Instance variable">pos</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="-14" name="Pick by unique ID" sid="623033067738815" type="edificio2">
+                            <param id="0" name="Unique ID">8</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="298227335250881" type="solParedIZQ">
-                            <param id="0" name="Object">edificio2</param>
-                            <param id="1" name="Image point (optional)">&quot;pared1&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="987444146680059">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="578826974352772" type="solParedIZQ">
+                                    <param id="0" name="Instance variable">pos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="502844980250816" type="solParedIZQ">
+                                    <param id="0" name="Unique ID">54</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="298227335250881" type="solParedIZQ">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;pared1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="335749917757446">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="289406098431766" type="solParedDER">
+                                    <param id="0" name="Instance variable">pos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="744761586954795" type="solParedDER">
+                                    <param id="0" name="Unique ID">57</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="955948102541957" type="solParedDER">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;pared2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="335749917757446">
+                <event-block sid="466506913941726">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="289406098431766" type="solParedDER">
-                            <param id="0" name="Instance variable">pos</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                        <condition id="-14" name="Pick by unique ID" sid="874992328025697" type="edificio2">
+                            <param id="0" name="Unique ID">6</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="955948102541957" type="solParedDER">
-                            <param id="0" name="Object">edificio2</param>
-                            <param id="1" name="Image point (optional)">&quot;pared2&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="332501991020424">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="426070675923910" type="solParedIZQ">
+                                    <param id="0" name="Instance variable">pos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="507282119858820" type="solParedIZQ">
+                                    <param id="0" name="Unique ID">55</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="241833118406964" type="solParedIZQ">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;pared1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="957823355742414">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="766602957480094" type="solParedDER">
+                                    <param id="0" name="Instance variable">pos</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="457901689400107" type="solParedDER">
+                                    <param id="0" name="Unique ID">56</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="759059918254975" type="solParedDER">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;pared2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="532550222072037">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="131221247505890" type="edificio2">
-                            <param id="0" name="Unique ID">656</param>
+                            <param id="0" name="Unique ID">6</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -79,7 +145,7 @@
                         <event-block sid="234295829111112">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="491428422798185" type="objEn">
-                                    <param id="0" name="Unique ID">758</param>
+                                    <param id="0" name="Unique ID">58</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -92,7 +158,7 @@
                         <event-block sid="390970430222046">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="440147155545899" type="objatras">
-                                    <param id="0" name="Unique ID">790</param>
+                                    <param id="0" name="Unique ID">7</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -104,12 +170,58 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="718207936788155">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="304735250127612" type="edificio2">
+                            <param id="0" name="Unique ID">8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="727269214839267">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="986979411987288" type="casafuera">
+                                    <param id="0" name="Unique ID">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="906283555365621" type="casafuera">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">&quot;casa_fuera&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="961468445864861">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="967053781014803" type="edificio2">
+                            <param id="0" name="Unique ID">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="690407593981390">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="518197203787141" type="casafuera">
+                                    <param id="0" name="Unique ID">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="585397966236499" type="casafuera">
+                                    <param id="0" name="Object">edificio2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="185282558331556">
             <conditions>
                 <condition id="-14" name="Pick by unique ID" sid="576581786890906" type="casafuera">
-                    <param id="0" name="Unique ID">551</param>
+                    <param id="0" name="Unique ID">13</param>
                 </condition>
             </conditions>
             <actions />
@@ -117,7 +229,7 @@
                 <event-block sid="645129061992012">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="881213974115043" type="OBJPOSICION">
-                            <param id="0" name="Unique ID">531</param>
+                            <param id="0" name="Unique ID">61</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -132,7 +244,7 @@
         <event-block sid="905841329440819">
             <conditions>
                 <condition id="-14" name="Pick by unique ID" sid="887262144299837" type="edificio2">
-                    <param id="0" name="Unique ID">408</param>
+                    <param id="0" name="Unique ID">8</param>
                 </condition>
             </conditions>
             <actions />
@@ -140,7 +252,7 @@
                 <event-block sid="205106601123510">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="205366483643786" type="casafuera">
-                            <param id="0" name="Unique ID">551</param>
+                            <param id="0" name="Unique ID">13</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -225,7 +337,7 @@
                 <event-block sid="631464201129894">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="241733326806423" type="casafuera">
-                            <param id="0" name="Unique ID">551</param>
+                            <param id="0" name="Unique ID">13</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -237,7 +349,7 @@
                 <event-block sid="685078448393369">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="893152939086168" type="casafuera">
-                            <param id="0" name="Unique ID">445</param>
+                            <param id="0" name="Unique ID">14</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -249,7 +361,7 @@
                 <event-block sid="487083390729697">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="996273257148290" type="suelocasas">
-                            <param id="0" name="Unique ID">806</param>
+                            <param id="0" name="Unique ID">59</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -269,7 +381,7 @@
                 <event-block sid="466672196008306">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="172562621076308" type="suelocasas">
-                            <param id="0" name="Unique ID">806</param>
+                            <param id="0" name="Unique ID">59</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -300,7 +412,7 @@
                 <event-block sid="138711555411988">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="673648854442818" type="casafuera">
-                            <param id="0" name="Unique ID">551</param>
+                            <param id="0" name="Unique ID">13</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -331,7 +443,7 @@
                 <event-block sid="213168246293618">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="297471550230498" type="casafuera">
-                            <param id="0" name="Unique ID">445</param>
+                            <param id="0" name="Unique ID">14</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -345,7 +457,7 @@
         <event-block sid="930528787684701">
             <conditions>
                 <condition id="-14" name="Pick by unique ID" sid="617103079436347" type="edificio2">
-                    <param id="0" name="Unique ID">408</param>
+                    <param id="0" name="Unique ID">8</param>
                 </condition>
             </conditions>
             <actions />
@@ -353,7 +465,7 @@
                 <event-block sid="969167808023496">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="385338890147386" type="puerta">
-                            <param id="0" name="Unique ID">454</param>
+                            <param id="0" name="Unique ID">12</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -366,7 +478,7 @@
                 <event-block sid="553882715151738">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="209261638748543" type="puerta">
-                            <param id="0" name="Unique ID">453</param>
+                            <param id="0" name="Unique ID">9</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -416,6 +528,10 @@
                                             <param id="0" name="Instance variable">dato</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="706081818998543" type="funcion">
+                                            <param id="0" name="Name">&quot;estado_puerta&quot;</param>
+                                            <param id="1" name="Parameter {n}">puerta.UID</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -450,6 +566,10 @@
                                             <param id="0" name="Instance variable">dato</param>
                                             <param id="1" name="Value">2</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="321119311098159" type="funcion">
+                                            <param id="0" name="Name">&quot;estado_puerta&quot;</param>
+                                            <param id="1" name="Parameter {n}">puerta.UID</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -470,68 +590,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="587837209198822">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="616140533714777" type="puerta">
-                    <param id="0" name="Instance variable">dato</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Move to layer" sid="938000432522011" type="puerta">
-                    <param id="0" name="Layer">&quot;pared&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="357095576034490">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="414892261152340" type="puerta">
-                            <param id="0" name="Instance variable">abierto</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="190217002425681" type="solPared2">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="759718510463397" type="solPared">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="186663706285751">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="808129421008093" type="puerta">
-                    <param id="0" name="Instance variable">dato</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Move to layer" sid="232384275802007" type="puerta">
-                    <param id="0" name="Layer">&quot;casas&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="530092323800821">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="950964494436084" type="puerta">
-                            <param id="0" name="Instance variable">abierto</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="789321050545067" type="solPared">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="982999458562122" type="solPared2">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="597424025465909">
             <conditions>
                 <condition id="3" name="On touched object" sid="548856877830798" type="Touch">
@@ -546,15 +604,6 @@
                     <param id="0" name="Instance variable">abierto</param>
                     <param id="1" name="Value">1</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="702421574212328">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="586240565641390" type="puerta">
-                    <param id="0" name="Instance variable">abierto</param>
-                </condition>
-            </conditions>
-            <actions>
                 <action id="7" name="Set mirrored" sid="221476908974092" type="puerta">
                     <param id="0" name="State">0</param>
                 </action>
@@ -562,18 +611,32 @@
                     <param id="0" name="Layer">&quot;casas&quot;</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="296002021103034">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="129615853000812" type="puerta">
-                    <param id="0" name="Instance variable">abierto</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="946913773917290" type="puerta">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="339834288558193">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="217873194889735" type="solPared">
+                            <param id="0" name="Unique ID">puerta.sol_pared</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="135310836630553" type="solPared">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="480073294544306">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="512240165330657" type="solPared2">
+                            <param id="0" name="Unique ID">puerta.sol_pared_2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="723171569468787" type="solPared2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="874326565278539">
             <conditions>
@@ -590,6 +653,9 @@
                     <param id="0" name="Instance variable">abierto</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="7" name="Set mirrored" sid="946913773917290" type="puerta">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="701274156334054">
@@ -604,14 +670,7 @@
                             <param id="0" name="Instance variable">abierto</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="135310836630553" type="solPared">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Solid" id="0" name="Set enabled" sid="723171569468787" type="solPared2">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
@@ -654,7 +713,7 @@
         <event-block sid="127846999958999">
             <conditions>
                 <condition id="-14" name="Pick by unique ID" sid="441406045579894" type="casafuera">
-                    <param id="0" name="Unique ID">445</param>
+                    <param id="0" name="Unique ID">13</param>
                 </condition>
             </conditions>
             <actions />
@@ -662,7 +721,7 @@
                 <event-block sid="723960575188881">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="218299126308151" type="edificio2">
-                            <param id="0" name="Unique ID">656</param>
+                            <param id="0" name="Unique ID">6</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -691,6 +750,182 @@
                     <param id="1" name="Object">casafuera</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="121641458742904">
+            <conditions>
+                <condition id="-11" name="For Each" sid="127003331820636" type="System">
+                    <param id="0" name="Object">paredE</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="554305279076144">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="162936010429013" type="paredE">
+                            <param id="0" name="Object">solPared</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="948884404269370">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="398563393848230" type="paredE">
+                                    <param id="0" name="Object">puerta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="604290882154632" type="puerta">
+                                    <param id="0" name="Instance variable">sol_pared</param>
+                                    <param id="1" name="Value">solPared.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="118447003517160">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="536449528266354" type="paredE">
+                            <param id="0" name="Object">solPared2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="641797901957530">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="155790314579614" type="paredE">
+                                    <param id="0" name="Object">puerta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="462594284832357" type="puerta">
+                                    <param id="0" name="Instance variable">sol_pared_2</param>
+                                    <param id="1" name="Value">solPared2.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="753812310742850">
+            <conditions>
+                <condition id="0" name="On function" sid="167288466264762" type="funcion">
+                    <param id="0" name="Name">&quot;estado_puerta&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="161906936777053">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="391876862908854" type="puerta">
+                            <param id="0" name="Unique ID">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="846726987882897">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="297128351549919" type="puerta">
+                                    <param id="0" name="Instance variable">dato</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="914937518474541" type="puerta">
+                                    <param id="0" name="Layer">&quot;pared&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="264144034854321">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="867394210590654" type="puerta">
+                                            <param id="0" name="Instance variable">abierto</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="206152150604006">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="456165806039784" type="solPared">
+                                                    <param id="0" name="Unique ID">puerta.sol_pared</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="953363880731416" type="solPared">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="604196134130048">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="985324457350699" type="solPared2">
+                                                    <param id="0" name="Unique ID">puerta.sol_pared_2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="293343596903926" type="solPared2">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="350680521965380">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="558266441477384" type="puerta">
+                                    <param id="0" name="Instance variable">dato</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="602320113884332" type="puerta">
+                                    <param id="0" name="Layer">&quot;casas&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="391489682486151">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="588938919018799" type="puerta">
+                                            <param id="0" name="Instance variable">abierto</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="867207411804716">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="581289218181152" type="solPared">
+                                                    <param id="0" name="Unique ID">puerta.sol_pared</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="821069505530878" type="solPared">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="378938120420311">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="722938189889030" type="solPared2">
+                                                    <param id="0" name="Unique ID">puerta.sol_pared_2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Solid" id="0" name="Set enabled" sid="578073267621076" type="solPared2">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

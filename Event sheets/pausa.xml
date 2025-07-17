@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>pausa</name>
+    <events>
+        <event-block sid="935851898104501">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="778944621039790" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="462381022112699" type="b_continuar" />
+                <action id="-9" name="Destroy" sid="387256251228883" type="b_reiniciar" />
+                <action id="-9" name="Destroy" sid="633381854755751" type="b_salir" />
+                <action id="-9" name="Destroy" sid="282915602689869" type="O_MP" />
+            </actions>
+        </event-block>
+        <event-block sid="859306758535963">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="114665563311246" type="Touch">
+                    <param id="0" name="Object">b_pause</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="188491630605722" type="b_pause">
+                    <param id="0" name="Instance variable">var</param>
+                    <param id="1" name="Value">&quot;si&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="660452419817496">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="851120627780150" type="b_pause">
+                    <param id="0" name="Instance variable">var</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="909376861929086" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="878867247855209">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="930239068343900" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="471628649695869" type="System">
+                            <param id="0" name="Variable">botones</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="264930797152723">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="406245019692125" type="b_pause">
+                    <param id="0" name="Instance variable">var</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;no&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="498839679544020" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="663505322512454">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="727382563376642" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="759735117484210" type="System">
+                            <param id="0" name="Variable">botones</param>
+                            <param id="1" name="Value">&quot;si&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="620705177877299">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="795209712098599" type="System">
+                    <param id="0" name="Variable">botones</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;no&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="556537660887400" type="b_pause">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.10)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="962524337033511" type="O_MP">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.5)</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="473762767295910" type="System">
+                    <param id="0" name="Layer">&quot;botones&quot;</param>
+                    <param id="1" name="Scale">3.0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="850146427302916">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="754410121540461" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="235666419264637" type="System">
+                            <param id="0" name="Object to create">O_MP</param>
+                            <param id="1" name="Layer">&quot;botones&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="373643493019409">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="820938013467106" type="System">
+                    <param id="0" name="Variable">botones</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;si&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Set layer scale" sid="256683154178541" type="System">
+                    <param id="0" name="Layer">&quot;botones&quot;</param>
+                    <param id="1" name="Scale">lerp(LayerScale(&quot;botones&quot;), 1, 0.07)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="951919004670718" type="b_pause">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,80,0.10)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="314780408192292" type="O_MP">
+                    <param id="0" name="Opacity">lerp(self.Opacity,0,0.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="330042748966249">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="405577883617090" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="746806978284963" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="242125039918133" type="b_continuar">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="293159159553653">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="439789182923140" type="System">
+                    <param id="0" name="Variable">MPCumplida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="924487450509250" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="496436019515577" type="b_continuar">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="941658069982772">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="725727028801590" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="788563262293855" type="funcion">
+                            <param id="0" name="Name">&quot;crearBTN&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="207017998441169">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="940944532694854" type="System">
+                    <param id="0" name="Variable">MPCumplida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="160603677146778" type="System">
+                    <param id="0" name="Variable">NivelFinalizado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="195977763900948" type="b_continuar">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="945921113154790">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="979854710832452" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="101768896094231" type="funcion">
+                            <param id="0" name="Name">&quot;crearBTN&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="175474030707133">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="732342669978959" type="Touch">
+                    <param id="0" name="Object">b_continuar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="179248553539668">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="178082649658585" type="b_continuar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="627474287856175" type="b_pause">
+                            <param id="0" name="Instance variable">var</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="455746861186595" type="mision_principal1">
+                            <param id="0" name="Instance variable">ver</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="395452008040943" type="b_continuar">
+                            <param id="0" name="Instance variable">E</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="212107306071894" type="b_reiniciar">
+                            <param id="0" name="Instance variable">E</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="167366712555387" type="b_salir">
+                            <param id="0" name="Instance variable">E</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="654838738778986">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="460294971282756" type="b_continuar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="369407685771269" type="funcion">
+                            <param id="0" name="Name">&quot;SiguienteNivel&quot;</param>
+                            <param id="1" name="Parameter {n}">nivel</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="708369553478384">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="461873836200388" type="Touch">
+                    <param id="0" name="Object">b_reiniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="237881312696545" type="System" />
+                <action id="33" name="Stop all" sid="932636869460191" type="Audio" />
+                <action id="-21" name="Reset global variables" sid="380643328594884" type="System" />
+                <action id="-13" name="Set time scale" sid="419290274363637" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="342372245485847">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="726132418024961" type="Touch">
+                    <param id="0" name="Object">b_salir</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="649072639901423">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="128529697682114" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="863245861367767" type="b_continuar">
+                    <param id="0" name="X">lerp(self.X,120,0.15)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="484725908280658" type="b_continuar">
+                    <param id="0" name="Opacity">lerp(self.Opacity,0,0.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="716837061103458">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="680346883312452" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="199139635354992" type="b_reiniciar">
+                    <param id="0" name="X">lerp(self.X,120,0.15)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="583750652102794" type="b_reiniciar">
+                    <param id="0" name="Opacity">round(lerp(self.Opacity,0,0.5))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="290420652462804">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="523672503663923" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="561233797574748" type="b_salir">
+                    <param id="0" name="X">lerp(self.X,120,0.15)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="147876585135130" type="b_salir">
+                    <param id="0" name="Opacity">round(lerp(self.Opacity,0,0.5))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="316030387140099">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="737240537006473" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="895489733732339" type="b_continuar">
+                    <param id="0" name="X">lerp(self.X,204,0.4)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="334412246378067" type="b_continuar">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841931590350659">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="831574601514550" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="345558515075483" type="b_reiniciar">
+                    <param id="0" name="X">lerp(self.X,177,0.4)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="707742172014585" type="b_reiniciar">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="651558581685809">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="324057384415589" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="786428892366281" type="b_salir">
+                    <param id="0" name="X">lerp(self.X,147,0.4)</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="128339297126723" type="b_salir">
+                    <param id="0" name="Opacity">lerp(self.Opacity,100,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256393375543144">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="650833865149150" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="862619713719136" type="b_continuar">
+                    <param id="0" name="X">lerp(self.X,195,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="948641026855441">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="726342885568291" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="587012065516737" type="b_reiniciar">
+                    <param id="0" name="X">lerp(self.X,166,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="957388395548334">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="799010395893250" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="359820442387210" type="b_salir">
+                    <param id="0" name="X">lerp(self.X,132,0.4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="761115841963650">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="855828709747596" type="b_continuar">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">202</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="730496935400598" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="773692000819612" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="576738987280869" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620248798798900">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="182957353379939" type="b_reiniciar">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">175</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="685052609281018" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="765859500553941" type="b_reiniciar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="973171932277406" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="479123951796966">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="506114800572214" type="b_salir">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">145</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="614591482010081" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="313885125527927" type="b_salir">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="809951223931948">
+            <conditions>
+                <condition id="3" name="On touched object" sid="315127075681247" type="Touch">
+                    <param id="0" name="Object">b_pause</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="316939671961115" type="funcion">
+                    <param id="0" name="Name">&quot;crearBTN&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="721997132810852">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="348537763728949" type="b_continuar">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Opacity">2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="880143425102469" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-16" name="Wait" sid="502270906070954" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="652073585846760" type="b_continuar" />
+                <action id="-9" name="Destroy" sid="826114613384479" type="b_reiniciar" />
+                <action id="-9" name="Destroy" sid="769678388008389" type="b_salir" />
+            </actions>
+        </event-block>
+        <event-block sid="974118220354146">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="465928776979673" type="cuerpoP" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="749807744696532" type="funcion">
+                    <param id="0" name="Name">&quot;crearBTN&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="186633679909645">
+            <conditions>
+                <condition id="-18" name="On created" sid="599049878728795" type="b_continuar" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="248818801069260" type="b_continuar">
+                    <param id="0" name="Instance variable">E</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="887692758786268" type="b_continuar">
+                    <param id="0" name="Width">24</param>
+                    <param id="1" name="Height">26</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979579328167935">
+            <conditions>
+                <condition id="-18" name="On created" sid="404753788895034" type="b_reiniciar" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="484226541349966" type="b_reiniciar">
+                    <param id="0" name="Width">24</param>
+                    <param id="1" name="Height">25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483976302283995">
+            <conditions>
+                <condition id="-18" name="On created" sid="926053944774901" type="b_salir" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="675460611249636" type="b_salir">
+                    <param id="0" name="Width">15</param>
+                    <param id="1" name="Height">29</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="101014159074065">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="257552301214867" type="O_MP">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Opacity">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="231643131850518" type="O_MP" />
+            </actions>
+        </event-block>
+        <event-block sid="718945908755015">
+            <conditions>
+                <condition id="-18" name="On created" sid="447625188687547" type="O_MP" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="591773826809888" type="O_MP">
+                    <param id="0" name="Opacity">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="469662169170057">
+            <conditions>
+                <condition id="0" name="On function" sid="890019176440454" type="funcion">
+                    <param id="0" name="Name">&quot;crearBTN&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="230323333412662" type="System">
+                    <param id="0" name="Object to create">b_continuar</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">150</param>
+                </action>
+                <action id="-3" name="Create object" sid="256980806103034" type="System">
+                    <param id="0" name="Object to create">b_reiniciar</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">150</param>
+                </action>
+                <action id="-3" name="Create object" sid="824435072737152" type="System">
+                    <param id="0" name="Object to create">b_salir</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="410674240748380">
+            <conditions>
+                <condition id="0" name="On function" sid="761173812275775" type="funcion">
+                    <param id="0" name="Name">&quot;SiguienteNivel&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="758925693020013">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="932586865589500" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="714698915143094">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="613362688091172" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="169619225452119">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="186864198175599" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="476603026630044">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="217878778223861" type="funcion">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

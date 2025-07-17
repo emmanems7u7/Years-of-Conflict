@@ -2,5 +2,1098 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ev_personaje</name>
-    <events />
+    <events>
+        <variable constant="0" name="a" sid="415492588851490" static="0" type="number">0</variable>
+        <event-group description="" sid="669423327013476" title="botones">
+            <sub-events>
+                <event-block sid="537283110491874">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="885664884597653" type="System">
+                            <param id="0" name="Variable">personaje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;policia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="673775819894016">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="604694857548392" type="Touch">
+                                    <param id="0" name="Object">disparar</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="410571045332450">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="553757271393552" type="cuerpoP">
+                                            <param id="0" name="Instance variable">colision</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="117192333988786" type="brazo1">
+                                            <param id="0" name="Instance variable">cuchillo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="988236825564589">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="634155280643339" type="cuerpoP">
+                                            <param id="0" name="Instance variable">colision</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="994968631721804">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="603942903894271" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="457918839507634" type="brazo1">
+                                                    <param id="0" name="Instance variable">arma</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;M16&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="480013541583729">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="204623281188617" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="379755179071690" type="funcion">
+                                                            <param id="0" name="Name">&quot;disparar&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma{###}&quot;personaje&quot;{###}brazo1.ImagePointX(&quot;bala&quot;){###}brazo1.ImagePointY(&quot;bala&quot;){###}brazo1.ImagePointX(&quot;casc&quot;){###}brazo1.Angle{###}cuerpoP.lado1</param>
+                                                        </action>
+                                                        <action id="-12" name="Subtract from" sid="770848731031064" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="122770854132116" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="220255672976363" type="funcion">
+                                                            <param id="0" name="Name">&quot;disparar&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma{###}&quot;personaje&quot;{###}brazo1.ImagePointX(&quot;bala&quot;){###}brazo1.ImagePointY(&quot;bala&quot;){###}brazo1.ImagePointX(&quot;casc&quot;){###}brazo1.Angle{###}cuerpoP.lado1</param>
+                                                        </action>
+                                                        <action id="-12" name="Subtract from" sid="256889223133573" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="304392406911911" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="257881112916087" type="funcion">
+                                                            <param id="0" name="Name">&quot;disparar&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma{###}&quot;personaje&quot;{###}brazo1.ImagePointX(&quot;bala&quot;){###}brazo1.ImagePointY(&quot;bala&quot;){###}brazo1.ImagePointX(&quot;casc&quot;){###}brazo1.Angle{###}cuerpoP.lado1</param>
+                                                        </action>
+                                                        <action id="-12" name="Subtract from" sid="718164995879112" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="625453474239046">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="158885478527141" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="744357128168897" type="funcion">
+                                                            <param id="0" name="Name">&quot;NBalas&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="315571381141890" type="brazo1">
+                                                            <param id="0" name="Animation">&quot;CM16&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="487212860406324">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="202818449261499" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="752268301104366" type="brazo1">
+                                                    <param id="0" name="Instance variable">arma</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;FAL&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="872580824649719">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="880877789023953" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="375741712266661" type="funcion">
+                                                            <param id="0" name="Name">&quot;disparar&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma{###}&quot;personaje&quot;{###}brazo1.ImagePointX(&quot;bala&quot;){###}brazo1.ImagePointY(&quot;bala&quot;){###}brazo1.ImagePointX(&quot;casc&quot;){###}brazo1.Angle{###}cuerpoP.lado1</param>
+                                                        </action>
+                                                        <action id="-12" name="Subtract from" sid="961467491941414" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="472333871224107" type="System">
+                                                            <param id="0" name="Seconds">0.5</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="401992859515000">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="770041336418272" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="407730744218289" type="funcion">
+                                                            <param id="0" name="Name">&quot;NBalas&quot;</param>
+                                                            <param id="1" name="Parameter {n}">brazo1.arma</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="264319928438164" type="brazo1">
+                                                            <param id="0" name="Animation">&quot;CFal&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="644900748391079">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="402148653507112" type="Touch">
+                                    <param id="0" name="Object">disparar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="742232339211275" type="cuerpoP">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="133707719586627" title="disparo,salto">
+                    <sub-events>
+                        <event-block sid="905612491338912">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="251817167848519" type="Touch">
+                                    <param id="0" name="Object">disparar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="575772723262569" type="disparar">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="612839011247813">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="984231286629564" type="Touch">
+                                    <param id="0" name="Object">disparar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="863692827678086" type="disparar">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761263788312574">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="249581848877897" type="Touch">
+                                    <param id="0" name="Object">saltar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="331816747862133" type="saltar">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="969796726339550" type="cuerpoP">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578195703693681">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="674934116655344" type="Touch">
+                                    <param id="0" name="Object">saltar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="632490112095318" type="saltar">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="152423337789622" title="personaje">
+            <sub-events>
+                <event-block sid="568801191901096">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="691643207279327" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="329420905322384" type="brazo1" />
+                        <action id="-29" name="Move to object" sid="293244366603364" type="cabeza">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">cuerpoP</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689023632507349">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="542322965742507" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="272283926495753" type="cabeza">
+                            <param id="0" name="Angle">cabeza.ANGULO</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="984335432605141" type="brazo1">
+                            <param id="0" name="Angle">brazo1.angulo</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="405140325588693">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="415415421397573" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="236887189936504" type="cabeza">
+                                    <param id="0" name="Object">cuerpoP</param>
+                                    <param id="1" name="Image point (optional)">&quot;cabeza&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="843073143066183" type="brazo2">
+                                    <param id="0" name="Object">cuerpoP</param>
+                                    <param id="1" name="Image point (optional)">&quot;brazo2&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="371288330395682" type="brazo1">
+                                    <param id="0" name="Object">cuerpoP</param>
+                                    <param id="1" name="Image point (optional)">&quot;brazo1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="872316056429444">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="791352853576715" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="864051215584410" type="cabeza">
+                                    <param id="0" name="Object">cuerpoP</param>
+                                    <param id="1" name="Image point (optional)">&quot;cabeza&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="223168436059196">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="565498913699199" type="cuerpoP" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="112002918874391" type="cuerpoP">
+                            <param id="0" name="Animation">&quot;run&quot;&amp;cuerpoP.personaje</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243934983414906">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="680660105993889" type="cuerpoP" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="664066884464604" type="cuerpoP">
+                            <param id="0" name="Animation">&quot;idle&quot;&amp;cuerpoP.personaje</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="781584432713416">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="539387131326304" type="cuerpoP" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="301719792648329" type="cuerpoP">
+                            <param id="0" name="Animation">&quot;idle&quot;&amp;cuerpoP.personaje</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="272641786371565">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="306792162051828" type="cuerpoP" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="862324412638411" type="cuerpoP">
+                                    <param id="0" name="Animation">&quot;run&quot;&amp;cuerpoP.personaje</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="677747247006410">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="498499512981433" type="cuerpoP" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="677182852228983" type="cuerpoP">
+                                    <param id="0" name="Animation">&quot;idle&quot;&amp;cuerpoP.personaje</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="367808518715048">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="731082727084665" type="cuerpoP" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="191689219207090">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="693031435648219" type="System">
+                            <param id="0" name="Variable">personaje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;policia&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="305787785142961">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="991161228875660" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="494970936364723" type="cabeza">
+                                    <param id="0" name="Animation">&quot;pol2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="613827655921953">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="764984368095658" type="System">
+                                    <param id="0" name="Variable">nivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="633378926113373" type="cabeza">
+                                    <param id="0" name="Animation">&quot;pol&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="741725145368098" type="cabeza">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="345107077740317">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="305592262261689" type="System">
+                            <param id="0" name="Variable">personaje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ayacucho&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="480646051018871" type="cabeza">
+                            <param id="0" name="Animation">&quot;aya&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="143596822512704" type="brazo1">
+                            <param id="0" name="Animation">&quot;ayacucho&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="535685745023197" type="brazo1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="740656595421451" type="brazo2">
+                            <param id="0" name="Animation">&quot;Defaultaya&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="519203503481986" type="brazo1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">cabeza</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="344212953156550">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="120756358882618" type="System">
+                            <param id="0" name="Variable">personaje</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;militar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="333252351667636" type="cabeza">
+                            <param id="0" name="Animation">&quot;militar&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="365140051445137" type="brazo1">
+                            <param id="0" name="Animation">&quot;militar&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="293503875632267" type="brazo1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="495995973849971" type="brazo2">
+                            <param id="0" name="Animation">&quot;militar&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="810069638294344" type="brazo1">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">cabeza</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="290064769788681" title="armas">
+            <sub-events>
+                <event-block sid="100693829876611">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="326015222263256" type="bala" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="463545797386116" type="System">
+                            <param id="0" name="Seconds">random(0.1,0.3)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="337839059640445" type="bala" />
+                    </actions>
+                </event-block>
+                <event-group description="" sid="752314787664005" title="agarrar arma">
+                    <sub-events>
+                        <event-block sid="581360123101588">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="100535761930717" type="System">
+                                    <param id="0" name="Variable">personaje</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;ayacucho&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="522456857170553" type="boton" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="877547629567816">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="494279821549856" type="System">
+                                    <param id="0" name="Variable">personaje</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ayacucho&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="329766606646707">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="627931182858790" type="brazo1">
+                                            <param id="0" name="Instance variable">agarrando</param>
+                                        </condition>
+                                        <condition disabled="1" id="1" inverted="1" name="Is overlapping another object" sid="110146691158807" type="cuerpoP">
+                                            <param id="0" name="Object">armas</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="335531353899425" type="boton">
+                                            <param id="0" name="Instance variable">entidad</param>
+                                            <param id="1" name="Value">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="220579225991491">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="290074477302104" type="cuerpoP">
+                                            <param id="0" name="Object">armas</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="684091843291250" type="boton">
+                                            <param id="0" name="Instance variable">entidad</param>
+                                            <param id="1" name="Value">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="135875334187721">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="344711384647143" type="boton">
+                                            <param id="0" name="Instance variable">entidad</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;yes&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-6" name="Set height" sid="582396836298441" type="boton">
+                                            <param id="0" name="Height">lerp(self.Height,17,0.3)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="956261589478110">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="565644612853767" type="boton">
+                                            <param id="0" name="Instance variable">entidad</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;no&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-6" name="Set height" sid="612241252693083" type="boton">
+                                            <param id="0" name="Height">lerp(self.Height,0,0.3)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="777515627594828">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="924837693463466" type="cuerpoP">
+                                            <param id="0" name="Object">armas</param>
+                                        </condition>
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="853105197222679" type="brazo1">
+                                            <param id="0" name="Instance variable">agarrando</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="858113639777290" type="boton">
+                                            <param id="0" name="Animation">armas.nombre</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="534278106263305">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="611252447753058" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="251190320990934">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="772306302418350" type="brazo1">
+                                                    <param id="0" name="Instance variable">agarrando</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="378446601549176" type="boton">
+                                                    <param id="0" name="Animation">brazo1.arma</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="305852528493604">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="493817551457712" type="cuerpoP">
+                                            <param id="0" name="Object">armas</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="525924256766165" type="brazo1">
+                                            <param id="0" name="Instance variable">agarrando</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="629184979247162" type="boton">
+                                            <param id="0" name="Instance variable">entidad</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="598009337777767">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="415534369524643" type="Touch">
+                                            <param id="0" name="Object">boton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="204381093723995">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="203245459992038" type="cuerpoP">
+                                                    <param id="0" name="Object">armas</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="981221054502623">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="204407202755377" type="brazo1">
+                                                            <param id="0" name="Instance variable">agarrando</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="162218726064544" type="brazo1">
+                                                            <param id="0" name="Animation">&quot;armado&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="624388314873623" type="brazo1">
+                                                            <param id="0" name="Instance variable">arma</param>
+                                                            <param id="1" name="Value">armas.nombre</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="531658858332598" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">armas.balas</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="559769753145549" type="brazo1">
+                                                            <param id="0" name="Instance variable">capacidad</param>
+                                                            <param id="1" name="Value">armas.capacidad</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="416392315896854" type="brazo1">
+                                                            <param id="0" name="Instance variable">cargas</param>
+                                                            <param id="1" name="Value">armas.cargas</param>
+                                                        </action>
+                                                        <action id="-9" name="Destroy" sid="966485561221829" type="armas" />
+                                                        <action id="-16" name="Wait" sid="171515573638778" type="System">
+                                                            <param id="0" name="Seconds">0.5</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="468936890456418" type="brazo1">
+                                                            <param id="0" name="Instance variable">agarrando</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="217761896549021">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="146107703474641" type="brazo1">
+                                                            <param id="0" name="Instance variable">agarrando</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="181555685517495" type="armas">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">brazo1.balas</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="810125628510957" type="armas">
+                                                            <param id="0" name="Instance variable">capacidad</param>
+                                                            <param id="1" name="Value">brazo1.capacidad</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="788818701892503" type="armas">
+                                                            <param id="0" name="Instance variable">cargas</param>
+                                                            <param id="1" name="Value">brazo1.cargas</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="964080548211066" type="brazo1">
+                                                            <param id="0" name="Instance variable">aux</param>
+                                                            <param id="1" name="Value">armas.nombre</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="978839097182530" type="brazo1">
+                                                            <param id="0" name="Instance variable">balas</param>
+                                                            <param id="1" name="Value">armas.balas</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="834855516638037" type="brazo1">
+                                                            <param id="0" name="Instance variable">capacidad</param>
+                                                            <param id="1" name="Value">armas.capacidad</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="888465557229860" type="brazo1">
+                                                            <param id="0" name="Instance variable">cargas</param>
+                                                            <param id="1" name="Value">armas.cargas</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="639453080847954" type="armas">
+                                                            <param id="0" name="Instance variable">nombre</param>
+                                                            <param id="1" name="Value">brazo1.arma</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="735418323513064">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="473153239546270" type="armas">
+                                                                    <param id="0" name="Instance variable">nombre</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;FAL&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="820426695117765" type="armas">
+                                                                    <param id="0" name="Animation">&quot;FAL&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="654771154506243" type="brazo1">
+                                                                    <param id="0" name="Instance variable">arma</param>
+                                                                    <param id="1" name="Value">brazo1.aux</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="591697808616495">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="921615823370111" type="armas">
+                                                                    <param id="0" name="Instance variable">nombre</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;M16&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="324297020095957" type="armas">
+                                                                    <param id="0" name="Animation">&quot;M_16&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="298287052559173" type="brazo1">
+                                                                    <param id="0" name="Instance variable">arma</param>
+                                                                    <param id="1" name="Value">brazo1.aux</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="698929857720900">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="198945678694979" type="brazo1">
+                                                                    <param id="0" name="Instance variable">arma</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;FAL&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="205896229130193" type="brazo1">
+                                                                    <param id="0" name="Animation">&quot;armado&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="311797053504647" type="brazo1">
+                                                                    <param id="0" name="Frame number">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="774951328877358">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="115894006446925" type="brazo1">
+                                                                    <param id="0" name="Instance variable">arma</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;M16&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="447251320335205" type="brazo1">
+                                                                    <param id="0" name="Animation">&quot;armado&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="296868723519198" type="brazo1">
+                                                                    <param id="0" name="Frame number">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="622499619247847">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="246205495619568" type="bala" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="169811152110821" type="bala" />
+                    </actions>
+                </event-block>
+                <event-block sid="623565632513611">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="962999915266099" type="bala" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="375106013219711" type="System">
+                            <param id="0" name="Seconds">random(0.3,0.5)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="607574538621786" type="bala" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="699062109220513">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="407527233112610" type="cabeza" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="258133671040951" type="bala">
+                                    <param id="0" name="Angle">brazo1.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="814725519472570">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="759313804436706" type="cabeza" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="954095950720823" type="bala">
+                                    <param id="0" name="Angle">brazo1.Angle-180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="186178406121872">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="206996786446110" type="HUMODIS" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="382192882272199">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="973059161113102" type="cabeza" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="965599996445460" type="HUMODIS">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801360958118638">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="864941254991756" type="cabeza" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="785666900669556" type="HUMODIS">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="961499724535987" title="personaje muerto">
+            <sub-events>
+                <event-block sid="484077147334776">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="775979549343729" type="bala_en">
+                            <param id="0" name="Object">cuerpoP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="130949763388900" type="cuerpoP">
+                            <param id="0" name="Instance variable">saludd</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="988601419888770" type="funcion">
+                            <param id="0" name="Name">&quot;sangreG&quot;</param>
+                            <param id="1" name="Parameter {n}">cuerpoP.X{###}cuerpoP.Y{###}brazo1.X{###}brazo1.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="886261215801508" type="bala_en" />
+                    </actions>
+                </event-block>
+                <event-block sid="392488826599607">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="596637278089043" type="cuerpoP">
+                            <param id="0" name="Instance variable">saludd</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="736532955196755" type="cuerpoP">
+                            <param id="0" name="Instance variable">muerto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="310383734233924" type="cuerpoP" />
+                        <action id="-9" name="Destroy" sid="746787479198348" type="brazo1" />
+                        <action id="-9" name="Destroy" sid="648419634486414" type="brazo2" />
+                        <action id="-9" name="Destroy" sid="324115655313647" type="cabeza" />
+                        <action id="0" name="Call function" sid="392344630147026" type="funcion">
+                            <param id="0" name="Name">&quot;sangre&quot;</param>
+                            <param id="1" name="Parameter {n}">cuerpoP.X{###}cuerpoP.Y{###}brazo1.X{###}brazo1.Y</param>
+                        </action>
+                        <action id="6" name="Stop" sid="426444129965141" type="Audio">
+                            <param id="0" name="Tag">&quot;latido&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="894075083537810" type="cuerpoP">
+                            <param id="0" name="Instance variable">muerto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="507468007247721">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="889252050235086" type="cuerpoP">
+                    <param id="0" name="Object">humo_gas_PM</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="919354454370550" type="cuerpoP">
+                    <param id="0" name="Instance variable">saludd</param>
+                    <param id="1" name="Value">0.02</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="159587487125698" type="efecto_gas">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,100,0.020)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="533840378305850">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="209972298960994" type="cuerpoP">
+                    <param id="0" name="Object">humo_gas_PM</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="383440351582249" type="efecto_gas">
+                    <param id="0" name="Opacity">lerp(Self.Opacity,0,0.005)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467514695490458">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="866988340670443" type="cuerpoP">
+                    <param id="0" name="Instance variable">saludd</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="186257934736120" type="cuerpoP">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="577954596845978" type="System">
+                    <param id="0" name="Object to create">fondo_sangre</param>
+                    <param id="1" name="Layer">&quot;fondos&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="796125742397777" type="cuerpoP">
+                    <param id="0" name="Instance variable">crea</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352003030908593">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="264141159242297" type="cuerpoP">
+                    <param id="0" name="Instance variable">saludd</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="383799197765237" type="fondo_sangre" />
+            </actions>
+        </event-block>
+        <event-block sid="897117792405270">
+            <conditions>
+                <condition id="2" name="Key is down" sid="179433621380049" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="270214017226321" type="cuerpoP">
+                    <param id="0" name="Instance variable">lado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="791170514305034">
+            <conditions>
+                <condition id="2" name="Key is down" sid="307271507581902" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="681099814560316" type="cuerpoP">
+                    <param id="0" name="Instance variable">lado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="418170080916176">
+            <conditions>
+                <condition id="2" name="Key is down" sid="999300044315353" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="873652627848202" type="cuerpoP">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551331099472889">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="674451268178166" type="cuerpoP">
+                    <param id="0" name="Instance variable">lado</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="394596011041973" type="cuerpoP">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="343039547797809" type="brazo1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="580835149194662" type="brazo2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="811660330942518" type="cuerpoP">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="488269367872641" type="cabeza">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="582173090794103">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="978352320120164" type="cuerpoP">
+                    <param id="0" name="Instance variable">lado</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="932258910597109" type="cuerpoP">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="952520305847220" type="brazo1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="636581673897137" type="brazo2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="764459346077211" type="cuerpoP">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="814848129919344" type="cabeza">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="886931011169152">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="762278112509720" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-3" name="Set position" sid="532099187593813" type="camara">
+                    <param id="0" name="X">lerp(self.X, cuerpoP.ImagePointX(&quot;camara&quot;), 0.05)</param>
+                    <param id="1" name="Y">lerp(self.Y, cuerpoP.ImagePointY(&quot;camara&quot;), 0.05)</param>
+                </action>
+                <action disabled="1" id="-2" name="Set Y" sid="278960946860290" type="camara">
+                    <param id="0" name="Y">lerp(self.Y, cuerpoP.ImagePointY(&quot;camara&quot;), 0.05)</param>
+                </action>
+                <action disabled="1" id="-1" name="Set X" sid="960867813824594" type="camara">
+                    <param id="0" name="X">lerp(self.X, cuerpoP.ImagePointX(&quot;camara&quot;), 0.05)</param>
+                </action>
+                <action id="-3" name="Set position" sid="376579208003450" type="camara">
+                    <param id="0" name="X">lerp(self.X, cuerpoP.X, 0.05)</param>
+                    <param id="1" name="Y">lerp(self.Y, cuerpoP.Y, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

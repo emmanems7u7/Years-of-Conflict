@@ -10,19 +10,24 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">lvl1</layout>
-        <layout order="2">Layout 1</layout>
-        <layout order="3">Layout 2</layout>
-        <event-sheet order="1">lvl1</event-sheet>
-        <event-sheet active="1" order="4">Event sheet 3</event-sheet>
+        <layout active="1" order="0">lvl1</layout>
+        <layout order="6">Layout 2</layout>
+        <layout order="7">Layout 1</layout>
+        <event-sheet order="3">ev_personaje</event-sheet>
+        <event-sheet order="2">lvl1</event-sheet>
+        <event-sheet order="1">tv</event-sheet>
+        <event-sheet order="4">pausa</event-sheet>
+        <event-sheet order="5">amotinados</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="tocar" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/botones/" />
@@ -42,6 +47,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="0" path="sound-folder/NPC/señorlvl1/" />
+        <folder expanded="0" path="sound-folder/disparo/" />
+        <folder expanded="0" path="sound-folder/impacto/" />
+        <folder expanded="0" path="sound-folder/muere/" />
+        <folder expanded="1" path="sound-folder/NPC/" />
+        <folder expanded="0" path="sound-folder/paso/" />
+        <folder expanded="1" path="sound-folder/tv/" />
         <folder expanded="1" path="animation-folder/b_continuar/" />
         <folder expanded="1" path="animation-folder/b_pause/" />
         <folder expanded="1" path="animation-folder/b_reiniciar/" />
@@ -115,5 +127,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/colider_jugador/agachado/" />
         <folder expanded="1" path="animation-folder/brazo1_1/" />
         <folder expanded="1" path="animation-folder/cabeza_1/" />
+        <folder expanded="1" path="animation-folder/bala/" />
+        <folder expanded="1" path="animation-folder/HUMODIS/" />
+        <folder expanded="1" path="animation-folder/armas/" />
+        <folder expanded="1" path="animation-folder/bala_en/" />
+        <folder expanded="1" path="animation-folder/fondo_sangre/" />
+        <folder expanded="1" path="animation-folder/cabeza_bomb/" />
+        <folder expanded="1" path="animation-folder/cuerpoAnimB/" />
+        <folder expanded="1" path="animation-folder/brazobombero/" />
     </folders-expanded>
 </c2uistate>
