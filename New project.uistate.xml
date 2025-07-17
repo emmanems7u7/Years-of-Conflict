@@ -14,9 +14,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="6">Layout 2</layout>
         <layout order="7">Layout 1</layout>
         <layout active="1" order="9">MenuPrincipal</layout>
-        <event-sheet order="3">ev_personaje</event-sheet>
-        <event-sheet order="2">lvl1</event-sheet>
         <event-sheet order="1">tv</event-sheet>
+        <event-sheet order="2">lvl1</event-sheet>
+        <event-sheet order="3">ev_personaje</event-sheet>
         <event-sheet order="4">pausa</event-sheet>
         <event-sheet order="5">amotinados</event-sheet>
         <event-sheet order="8">Event sheet 3</event-sheet>
@@ -44,7 +44,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/autos/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/lvl1/" />
+        <folder expanded="1" path="event-folder/lvl1/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -138,5 +138,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/cuerpoAnimB/" />
         <folder expanded="1" path="animation-folder/brazobombero/" />
         <folder expanded="1" path="animation-folder/machon/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/tuberia/" />
+        <folder expanded="1" path="animation-folder/puerta_f/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/medidores/" />
+        <folder expanded="1" path="animation-folder/poste/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
     </folders-expanded>
 </c2uistate>
