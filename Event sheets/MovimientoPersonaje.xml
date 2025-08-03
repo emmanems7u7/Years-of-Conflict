@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MovimientoPersonaje</name>
+    <events>
+        <comment>---------------------------------------------------------</comment>
+        <comment>*Movimiento de Cabeza*</comment>
+        <comment>Minimo = -20 Grados</comment>
+        <comment>Maximo = 300 Grados</comment>
+        <comment>---------------------------------------------------------</comment>
+        <event-block sid="525707672448437">
+            <conditions>
+                <condition id="0" name="On function" sid="840679314269976" type="funcion">
+                    <param id="0" name="Name">&quot;CabezaInicial&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="185238342891744" type="funcion">
+                    <param id="0" name="Name">&quot;MoverCabeza&quot;</param>
+                    <param id="1" name="Parameter {n}">700{###}0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314037266082015">
+            <conditions>
+                <condition id="0" name="On function" sid="558454435426906" type="funcion">
+                    <param id="0" name="Name">&quot;BrazoInicial&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="115307842849068" type="funcion">
+                    <param id="0" name="Name">&quot;MoverBrazo&quot;</param>
+                    <param id="1" name="Parameter {n}">700{###}40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530577774225919">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="550538870988739" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="870792824905788" type="funcion">
+                    <param id="0" name="Name">&quot;VerArma&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151035024708062">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="943161323792681" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="522920001097948" type="funcion">
+                    <param id="0" name="Name">&quot;Apuntar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="693782953808319">
+            <conditions>
+                <condition id="0" name="On function" sid="477342654402181" type="funcion">
+                    <param id="0" name="Name">&quot;MoverBrazo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="RotateTo" id="1" name="Set maximum speed" sid="595294781640312" type="brazo1_1">
+                    <param id="0" name="Max speed">funcion.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="254648593819689">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="777530453365248" type="col_menu_jugador">
+                            <param id="0" name="Instance variable">lateral</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="RotateTo" id="4" name="Rotate to angle" sid="689551727382097" type="brazo1_1">
+                            <param id="0" name="Angle">funcion.Param(1)</param>
+                            <param id="1" name="Clockwise">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333810494738068">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="769209705357938" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="RotateTo" id="4" name="Rotate to angle" sid="113621210884012" type="brazo1_1">
+                            <param id="0" name="Angle">180-funcion.Param(1)</param>
+                            <param id="1" name="Clockwise">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="292283000677750">
+            <conditions>
+                <condition id="0" name="On function" sid="600679812720636" type="funcion">
+                    <param id="0" name="Name">&quot;MoverCabeza&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="RotateTo" id="2" name="Set acceleration" sid="402044348319204" type="cabeza_1">
+                    <param id="0" name="Acceleration">funcion.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="175003459183624">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="851018097381253" type="col_menu_jugador">
+                            <param id="0" name="Instance variable">lateral</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="RotateTo" id="4" name="Rotate to angle" sid="965507345723142" type="cabeza_1">
+                            <param id="0" name="Angle">funcion.Param(1)</param>
+                            <param id="1" name="Clockwise">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="171766236217932">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="686846790749275" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="RotateTo" id="4" name="Rotate to angle" sid="199112381588473" type="cabeza_1">
+                            <param id="0" name="Angle">180-funcion.Param(1)</param>
+                            <param id="1" name="Clockwise">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="411912557377718">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="817571178926189" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="406596507117712" type="funcion">
+                    <param id="0" name="Name">&quot;MoverPersonaje&quot;</param>
+                    <param id="1" name="Parameter {n}">200</param>
+                </action>
+                <action id="0" name="Set text" sid="748682520213962" type="consola">
+                    <param id="0" name="Text">personaje&amp;&quot;_caminar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="370098080852739">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="940880086413798" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="708644743613588" type="funcion">
+                    <param id="0" name="Name">&quot;MoverPersonaje&quot;</param>
+                    <param id="1" name="Parameter {n}">115</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="239922591671841">
+            <conditions>
+                <condition id="0" name="On function" sid="438614767131901" type="funcion">
+                    <param id="0" name="Name">&quot;MoverPersonaje&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="PlatformMoveTo" id="1" name="Move to X" sid="651944217117607" type="col_menu_jugador">
+                    <param id="0" name="X">funcion.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="682116681699018">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="921761602497100" type="col_menu_jugador">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="459044831590560" type="col_menu_jugador">
+                            <param id="0" name="Instance variable">lateral</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137279032962451">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="238618748329875" type="col_menu_jugador">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">funcion.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="198203656301755" type="col_menu_jugador">
+                            <param id="0" name="Instance variable">lateral</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="530995570649981">
+            <conditions>
+                <condition behavior="PlatformMoveTo" id="0" name="On hit target position" sid="467099674662826" type="col_menu_jugador" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="542544582751140" type="col_menu_jugador">
+                    <param id="0" name="Animation">personaje&amp;&quot;_idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="490748947691348">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="919739586900355" type="col_menu_jugador" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="269518025295279" type="col_menu_jugador">
+                    <param id="0" name="Animation">personaje&amp;&quot;_caminar&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="384793451239503">
+            <conditions>
+                <condition id="0" name="On function" sid="246643762903296" type="funcion">
+                    <param id="0" name="Name">&quot;Apuntar&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="364615997965318" type="funcion">
+                    <param id="0" name="Name">&quot;MoverBrazo&quot;</param>
+                    <param id="1" name="Parameter {n}">800{###}0</param>
+                </action>
+                <action id="0" name="Call function" sid="378451247348013" type="funcion">
+                    <param id="0" name="Name">&quot;MoverCabeza&quot;</param>
+                    <param id="1" name="Parameter {n}">700{###}10</param>
+                </action>
+                <action id="-16" name="Wait" sid="258708446202019" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="510191772856494" type="funcion">
+                    <param id="0" name="Name">&quot;CabezaInicial&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="905412410797483" type="funcion">
+                    <param id="0" name="Name">&quot;BrazoInicial&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="859939325879053">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="631129336001114" type="col_menu_jugador">
+                    <param id="0" name="Instance variable">lateral</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="318581843867656" type="col_menu_jugador" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="363415423646637" type="col_menu_jugador">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="371904874793494" type="cabeza_1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="709451198503610" type="brazo1_1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="491885768426449" type="brazo1_1">
+                    <param id="0" name="Angle">180-brazo1_1.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="439674908176366" type="cabeza_1">
+                    <param id="0" name="Angle">180-cabeza_1.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691490978024919">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="687147673550631" type="col_menu_jugador">
+                    <param id="0" name="Instance variable">lateral</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="224753477557796" type="col_menu_jugador" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="535637133410156" type="col_menu_jugador">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="815724622270146" type="cabeza_1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="210614025068494" type="brazo1_1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="554289836701673" type="brazo1_1">
+                    <param id="0" name="Angle">180-brazo1_1.Angle</param>
+                </action>
+                <action id="-8" name="Set angle" sid="467331977983469" type="cabeza_1">
+                    <param id="0" name="Angle">180-cabeza_1.Angle</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="415808520500754" type="col_menu_jugador">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;animacion_1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="902204778380180">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="433657138352451" type="col_menu_jugador">
+                    <param id="0" name="Tag">&quot;hbk&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="678906992295921" type="funcion">
+                    <param id="0" name="Name">&quot;Apuntar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="453346877473373">
+            <conditions>
+                <condition id="0" name="On function" sid="371343826734435" type="funcion">
+                    <param id="0" name="Name">&quot;VerArma&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="414029399533108" type="funcion">
+                    <param id="0" name="Name">&quot;MoverCabeza&quot;</param>
+                    <param id="1" name="Parameter {n}">700{###}30</param>
+                </action>
+                <action id="0" name="Call function" sid="457432256483920" type="funcion">
+                    <param id="0" name="Name">&quot;MoverBrazo&quot;</param>
+                    <param id="1" name="Parameter {n}">700{###}10</param>
+                </action>
+                <action id="-16" name="Wait" sid="737393571458261" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="379025160908619" type="funcion">
+                    <param id="0" name="Name">&quot;CabezaInicial&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="311749374211381" type="funcion">
+                    <param id="0" name="Name">&quot;BrazoInicial&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

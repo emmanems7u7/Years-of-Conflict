@@ -11,8 +11,8 @@
         <include>ev_personaje</include>
         <include>pausa</include>
         <include>UI</include>
-        <variable constant="0" name="personaje" sid="391051168095730" static="0" type="number">0</variable>
-        <variable constant="0" name="nivel" sid="223834047116544" static="0" type="number">0</variable>
+        <variable constant="0" name="personaje" sid="391051168095730" static="0" type="text"></variable>
+        <variable constant="0" name="nivel" sid="223834047116544" static="0" type="number">1</variable>
         <variable constant="0" name="OBJETIVOEXISTE" sid="440290318107876" static="0" type="number">0</variable>
         <variable constant="0" name="camblvl1" sid="804523691602670" static="0" type="number">0</variable>
         <event-block sid="134319445552477">

@@ -125,7 +125,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="colider_jugador" uid="114">
+                <instance type="col_menu_jugador" uid="114">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>idle_0</initial-animation>
@@ -172,6 +172,7 @@
                                 <activated>Yes</activated>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -208,10 +209,12 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="PinToImagePoint" />
-                        <behavior-instance type="DragDrop">
+                        <behavior-instance type="RotateTo">
                             <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
+                                <activated>Yes</activated>
+                                <max-speed>180</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -271,7 +274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="suelo2" uid="128">
+                <instance type="suelo2" uid="109">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>

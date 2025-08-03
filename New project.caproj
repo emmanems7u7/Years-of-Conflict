@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -3917,7 +3918,7 @@
         <object-type name="Audio" sid="956069229697949">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="colider_jugador" sid="397025052805528">
+        <object-type name="col_menu_jugador" sid="397025052805528">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="salud" sid="522258285584684" type="number" />
@@ -3946,9 +3947,12 @@
                 <behavior-type name="PlatformMoveTo" sid="419980129226891">
                     <behavior id="Rex_Platform_MoveTo" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="385427285022061">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
             <container>
-                <type>colider_jugador</type>
+                <type>col_menu_jugador</type>
                 <type>cabeza_1</type>
                 <type>brazo1_1</type>
             </container>
@@ -8286,6 +8290,88 @@
                         </frame>
                     </animation>
                 </animation-folder>
+                <animation-folder name="policia">
+                    <animation framecount="4" loop="1" name="policia_idle" pingpong="0" repeatcount="1" repeatto="0" sid="597584004882265" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\000.png">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\001.png">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\002.png">
+                            <image-point name="cabeza" x="0.466667" y="0.307692" />
+                            <image-point name="brazo" x="0.266667" y="0.307692" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\003.png">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                    </animation>
+                    <animation framecount="15" loop="1" name="policia_caminar" pingpong="0" repeatcount="1" repeatto="0" sid="485792094316440" speed="17">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                        </frame>
+                    </animation>
+                </animation-folder>
                 <animation framecount="1" loop="0" name="Animation7" pingpong="0" repeatcount="1" repeatto="0" sid="477925521547570" speed="5">
                     <frame duration="1" hotspotX="0.722656" hotspotY="-1.12891" original-source="C:\Users\PC-DESARROLLO\Documents\Nueva carpeta (3)\images\colider_jugador-sheet0.png">
                         <collision-poly>
@@ -8337,11 +8423,27 @@
                 </behavior-type>
             </behaviors>
             <container>
-                <type>colider_jugador</type>
+                <type>col_menu_jugador</type>
                 <type>cabeza_1</type>
                 <type>brazo1_1</type>
             </container>
             <animation-folder>
+                <animation-folder name="Policia">
+                    <animation framecount="1" loop="0" name="pol_sig" pingpong="0" repeatcount="1" repeatto="0" sid="948278745753600" speed="5">
+                        <frame duration="1" hotspotX="0.0540541" hotspotY="0.5" original-source="C:\Users\Emanuel\Pictures\juego\000.png">
+                            <collision-poly>
+                                <point x="0.0540541" y="0.2" />
+                                <point x="0.486486" y="0.2" />
+                                <point x="0.918919" y="0.3" />
+                                <point x="0.675676" y="0.5" />
+                                <point x="0.837838" y="0.4" />
+                                <point x="0.486486" y="0.8" />
+                                <point x="0.027027" y="0.9" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
                 <animation framecount="2" loop="0" name="AR15_disparoa" pingpong="0" repeatcount="1" repeatto="0" sid="978969381666401" speed="25">
                     <frame duration="1" hotspotX="0.105263" hotspotY="0.5">
                         <image-point name="casquillo" x="0.394737" y="0.25" />
@@ -9223,16 +9325,22 @@
                 <behavior-type name="PinToImagePoint" sid="201082490659006">
                     <behavior id="Rex_pin2imgpt" />
                 </behavior-type>
-                <behavior-type name="DragDrop" sid="576671542753362">
-                    <behavior id="DragnDrop" />
+                <behavior-type name="RotateTo" sid="101819557076621">
+                    <behavior id="Rex_RotateTo" />
                 </behavior-type>
             </behaviors>
             <container>
-                <type>colider_jugador</type>
+                <type>col_menu_jugador</type>
                 <type>cabeza_1</type>
                 <type>brazo1_1</type>
             </container>
             <animation-folder>
+                <animation-folder name="Policia">
+                    <animation framecount="2" loop="1" name="pol_1" pingpong="0" repeatcount="1" repeatto="0" sid="487106082006921" speed="5">
+                        <frame duration="5" hotspotX="0.533333" hotspotY="0.823529" original-source="C:\Users\Emanuel\Downloads\fsd.png" />
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.823529" original-source="C:\Users\Emanuel\Downloads\fsd2.png" />
+                    </animation>
+                </animation-folder>
                 <animation framecount="1" loop="0" name="Animation9" pingpong="0" repeatcount="1" repeatto="0" sid="384490048861247" speed="5">
                     <frame duration="1" hotspotX="0.6" hotspotY="0.882353" />
                 </animation>
@@ -10694,6 +10802,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="consola" sid="760116838007365">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families>
         <family name="tocar" plugin-id="Sprite" sid="128673349386619">
@@ -10725,6 +10836,9 @@
             <event-sheet>NPCPersona.xml</event-sheet>
             <event-sheet>tv.xml</event-sheet>
         </event-folder>
+        <event-folder name="menu">
+            <event-sheet>MovimientoPersonaje.xml</event-sheet>
+        </event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>ev_personaje.xml</event-sheet>
@@ -10733,6 +10847,7 @@
         <event-sheet>pausa.xml</event-sheet>
         <event-sheet>mensajes.xml</event-sheet>
         <event-sheet>amotinados.xml</event-sheet>
+        <event-sheet>MenuPrincipal.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="110">
