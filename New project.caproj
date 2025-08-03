@@ -10,6 +10,7 @@
     <unique-id>zsey0dp0ng7d</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -61,7 +62,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Edge</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -8294,81 +8295,81 @@
                     <animation framecount="4" loop="1" name="policia_idle" pingpong="0" repeatcount="1" repeatto="0" sid="597584004882265" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\000.png">
                             <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\001.png">
                             <image-point name="cabeza" x="0.466667" y="0.288462" />
-                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.307692" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\002.png">
                             <image-point name="cabeza" x="0.466667" y="0.307692" />
-                            <image-point name="brazo" x="0.266667" y="0.307692" />
+                            <image-point name="brazo" x="0.266667" y="0.326923" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Emanuel\Downloads\colider_jugador\colider_jugador\idle_0\003.png">
                             <image-point name="cabeza" x="0.466667" y="0.288462" />
-                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.307692" />
                         </frame>
                     </animation>
                     <animation framecount="15" loop="1" name="policia_caminar" pingpong="0" repeatcount="1" repeatto="0" sid="485792094316440" speed="17">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.288462" />
                             <image-point name="brazo" x="0.266667" y="0.288462" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="cabeza" x="0.466667" y="0.288462" />
                             <image-point name="brazo" x="0.266667" y="0.288462" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="cabeza" x="0.466667" y="0.269231" />
-                            <image-point name="brazo" x="0.266667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.307692" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.288462" />
+                            <image-point name="brazo" x="0.266667" y="0.307692" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="cabeza" x="0.466667" y="0.269231" />
+                            <image-point name="brazo" x="0.266667" y="0.288462" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -10805,6 +10806,12 @@
         <object-type name="consola" sid="760116838007365">
             <plugin id="TextBox" />
         </object-type>
+        <object-type global="1" name="ArrayFunciones" sid="231782916732315">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="AJAX" sid="754555989196818">
+            <plugin id="AJAX" />
+        </object-type>
     </object-folder>
     <families>
         <family name="tocar" plugin-id="Sprite" sid="128673349386619">
@@ -10871,6 +10878,7 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="132" />
+        <global-instance type="AJAX" uid="173" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="disparo">
@@ -10931,6 +10939,9 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="JSON">
+            <file name="FuncionesPersonaje.json" />
         </file-folder>
     </files-folder>
 </c2project>

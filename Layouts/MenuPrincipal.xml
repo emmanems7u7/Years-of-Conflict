@@ -555,8 +555,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>39.839035034</x>
-                        <y>104.563964844</y>
+                        <x>102.444282532</x>
+                        <y>103.537773132</y>
                         <z>0</z>
                         <width>30</width>
                         <height>52</height>
@@ -1192,6 +1192,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="ArrayFunciones" uid="172">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
